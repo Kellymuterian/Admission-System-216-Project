@@ -11,15 +11,19 @@
 
     End Sub
 
-<<<<<<< HEAD
     Private Sub UserName_TextChanged(sender As Object, e As EventArgs) Handles UserName.TextChanged
 
     End Sub
 
     Private Sub LoginBtn_Click(sender As Object, e As EventArgs) Handles LoginBtn.Click
         If (Password.Text = "Lakers") Then
+            Form2.Tag = "Orina"
             Form2.Show()
             Me.Hide()
+        ElseIf (Password.Text = "studentxxx") Then
+            Form3.Show()
+            Me.Hide()
+
         Else
             MessageBox.Show("Incorrect Password")
         End If
@@ -28,9 +32,11 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Application.Exit()
     End Sub
-=======
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
->>>>>>> d473dca21b84e61543d1d88a22358249f5797479
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+    End Sub
 End Class
