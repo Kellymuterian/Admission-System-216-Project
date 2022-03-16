@@ -24,12 +24,13 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.UserName = New System.Windows.Forms.TextBox()
+        Me.LoginBtn = New System.Windows.Forms.Button()
         Me.Password = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.LoginBtn = New System.Windows.Forms.Button()
+        Me.UserName = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -49,30 +50,16 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Login"
         '
-        'PictureBox1
+        'LoginBtn
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(159, 50)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(50, 72)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(90, 18)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Username"
-        '
-        'UserName
-        '
-        Me.UserName.Location = New System.Drawing.Point(146, 69)
-        Me.UserName.Name = "UserName"
-        Me.UserName.Size = New System.Drawing.Size(261, 26)
-        Me.UserName.TabIndex = 1
+        Me.LoginBtn.BackColor = System.Drawing.Color.RoyalBlue
+        Me.LoginBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.LoginBtn.Location = New System.Drawing.Point(146, 168)
+        Me.LoginBtn.Name = "LoginBtn"
+        Me.LoginBtn.Size = New System.Drawing.Size(127, 41)
+        Me.LoginBtn.TabIndex = 4
+        Me.LoginBtn.Text = "Login"
+        Me.LoginBtn.UseVisualStyleBackColor = False
         '
         'Password
         '
@@ -91,22 +78,47 @@ Partial Class Form1
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Password"
         '
-        'LoginBtn
+        'UserName
         '
-        Me.LoginBtn.BackColor = System.Drawing.Color.RoyalBlue
-        Me.LoginBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.LoginBtn.Location = New System.Drawing.Point(146, 177)
-        Me.LoginBtn.Name = "LoginBtn"
-        Me.LoginBtn.Size = New System.Drawing.Size(127, 41)
-        Me.LoginBtn.TabIndex = 4
-        Me.LoginBtn.Text = "Login"
-        Me.LoginBtn.UseVisualStyleBackColor = False
+        Me.UserName.Location = New System.Drawing.Point(146, 69)
+        Me.UserName.Name = "UserName"
+        Me.UserName.Size = New System.Drawing.Size(261, 26)
+        Me.UserName.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(50, 72)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(90, 18)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Username"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(159, 50)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Red
+        Me.Button1.Location = New System.Drawing.Point(703, 507)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 26)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "EXIT"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1215, 941)
+        Me.ClientSize = New System.Drawing.Size(1215, 749)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form1"
@@ -125,4 +137,5 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LoginBtn As Button
+    Friend WithEvents Button1 As Button
 End Class
