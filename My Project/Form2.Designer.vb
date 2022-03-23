@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form2
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form2
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -28,8 +28,6 @@ Partial Class Form2
         Me.AddCourse = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.AddLecturer = New System.Windows.Forms.Button()
-        Me.AdmitStudent = New System.Windows.Forms.Button()
-        Me.AddUnit = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,7 +58,7 @@ Partial Class Form2
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.AddLecturer)
-        Me.GroupBox1.Controls.Add(Me.AdmitStudent)
+        Me.GroupBox1.Controls.Add(Me.AdmitStudents)
         Me.GroupBox1.Controls.Add(Me.AddUnit)
         Me.GroupBox1.Controls.Add(Me.AddCourse)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -72,7 +70,7 @@ Partial Class Form2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Admin Page"
         '
-        'AddLecturer
+        'AddUnit
         '
         Me.AddLecturer.Location = New System.Drawing.Point(354, 359)
         Me.AddLecturer.Name = "AddLecturer"
@@ -83,21 +81,21 @@ Partial Class Form2
         '
         'AdmitStudent
         '
-        Me.AdmitStudent.Location = New System.Drawing.Point(354, 267)
+        Me.AdmitStudent.Location = New System.Drawing.Point(354, 325)
         Me.AdmitStudent.Name = "AdmitStudent"
         Me.AdmitStudent.Size = New System.Drawing.Size(183, 55)
         Me.AdmitStudent.TabIndex = 3
         Me.AdmitStudent.Text = "Admit Student"
         Me.AdmitStudent.UseVisualStyleBackColor = True
         '
-        'AddUnit
+        'AddLecturer
         '
-        Me.AddUnit.Location = New System.Drawing.Point(354, 187)
-        Me.AddUnit.Name = "AddUnit"
-        Me.AddUnit.Size = New System.Drawing.Size(183, 55)
-        Me.AddUnit.TabIndex = 2
-        Me.AddUnit.Text = "Add Unit"
-        Me.AddUnit.UseVisualStyleBackColor = True
+        Me.AddLecturer.Location = New System.Drawing.Point(354, 401)
+        Me.AddLecturer.Name = "AddLecturer"
+        Me.AddLecturer.Size = New System.Drawing.Size(183, 55)
+        Me.AddLecturer.TabIndex = 4
+        Me.AddLecturer.Text = "Add Lecturer"
+        Me.AddLecturer.UseVisualStyleBackColor = True
         '
         'Form2
         '
@@ -118,6 +116,6 @@ Partial Class Form2
     Friend WithEvents AddCourse As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents AddLecturer As Button
-    Friend WithEvents AdmitStudent As Button
+    Friend WithEvents AdmitStudents As Button
     Friend WithEvents AddUnit As Button
 End Class

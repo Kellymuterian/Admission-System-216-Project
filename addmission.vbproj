@@ -139,15 +139,6 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="My Project\AddLecturer.resx">
-      <DependentUpon>AddLecturer.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="My Project\AddUnits.resx">
-      <DependentUpon>AddUnits.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="My Project\CoursesForm.resx">
-      <DependentUpon>CoursesForm.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
