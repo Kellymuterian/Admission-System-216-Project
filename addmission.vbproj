@@ -83,10 +83,15 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <Compile Include="MainDbDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainDbDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form3.vb">
+    <Compile Include="My Project\AdmitStudent.Designer.vb">
+      <DependentUpon>AdmitStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AdmitStudent.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -137,6 +142,17 @@
     </None>
     <None Include="MainDbDataSet.xss">
       <DependentUpon>MainDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MainDbDataSet1.xsc">
+      <DependentUpon>MainDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MainDbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MainDbDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MainDbDataSet1.xss">
+      <DependentUpon>MainDbDataSet1.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

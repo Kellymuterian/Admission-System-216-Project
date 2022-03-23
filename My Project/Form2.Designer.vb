@@ -24,49 +24,100 @@ Partial Class Form2
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblDateTime = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.AddCourse = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.AddUnit = New System.Windows.Forms.Button()
+        Me.AdmitStudent = New System.Windows.Forms.Button()
+        Me.AddLecturer = New System.Windows.Forms.Button()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(74, 35)
+        Me.Label1.Location = New System.Drawing.Point(283, 39)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(160, 25)
+        Me.Label1.Size = New System.Drawing.Size(295, 31)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ADMIN LOGIN"
-        '
-        'lblDateTime
-        '
-        Me.lblDateTime.AutoSize = True
-        Me.lblDateTime.Location = New System.Drawing.Point(652, 35)
-        Me.lblDateTime.Name = "lblDateTime"
-        Me.lblDateTime.Size = New System.Drawing.Size(56, 13)
-        Me.lblDateTime.TabIndex = 1
-        Me.lblDateTime.Text = "Date Time"
+        Me.Label1.Text = "Welcome Back Admin"
         '
         'Timer1
         '
         Me.Timer1.Interval = 1000
         '
+        'AddCourse
+        '
+        Me.AddCourse.Location = New System.Drawing.Point(354, 179)
+        Me.AddCourse.Name = "AddCourse"
+        Me.AddCourse.Size = New System.Drawing.Size(183, 55)
+        Me.AddCourse.TabIndex = 1
+        Me.AddCourse.Text = "Add Courses"
+        Me.AddCourse.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.AddLecturer)
+        Me.GroupBox1.Controls.Add(Me.AdmitStudent)
+        Me.GroupBox1.Controls.Add(Me.AddUnit)
+        Me.GroupBox1.Controls.Add(Me.AddCourse)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(4, 2)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(990, 637)
+        Me.GroupBox1.TabIndex = 2
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Admin Page"
+        '
+        'AddUnit
+        '
+        Me.AddUnit.Location = New System.Drawing.Point(354, 253)
+        Me.AddUnit.Name = "AddUnit"
+        Me.AddUnit.Size = New System.Drawing.Size(183, 55)
+        Me.AddUnit.TabIndex = 2
+        Me.AddUnit.Text = "Add Unit"
+        Me.AddUnit.UseVisualStyleBackColor = True
+        '
+        'AdmitStudent
+        '
+        Me.AdmitStudent.Location = New System.Drawing.Point(354, 325)
+        Me.AdmitStudent.Name = "AdmitStudent"
+        Me.AdmitStudent.Size = New System.Drawing.Size(183, 55)
+        Me.AdmitStudent.TabIndex = 3
+        Me.AdmitStudent.Text = "Admit Student"
+        Me.AdmitStudent.UseVisualStyleBackColor = True
+        '
+        'AddLecturer
+        '
+        Me.AddLecturer.Location = New System.Drawing.Point(354, 401)
+        Me.AddLecturer.Name = "AddLecturer"
+        Me.AddLecturer.Size = New System.Drawing.Size(183, 55)
+        Me.AddLecturer.TabIndex = 4
+        Me.AddLecturer.Text = "Add Lecturer"
+        Me.AddLecturer.UseVisualStyleBackColor = True
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(994, 511)
-        Me.Controls.Add(Me.lblDateTime)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(994, 651)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form2"
         Me.Text = "Form2"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents lblDateTime As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents AddCourse As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents AddLecturer As Button
+    Friend WithEvents AdmitStudent As Button
+    Friend WithEvents AddUnit As Button
 End Class

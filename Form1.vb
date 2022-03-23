@@ -12,8 +12,8 @@ Public Class Form1
             Form2.Show()
             Me.Hide()
         ElseIf (Password.Text = "student") Then
-            Form3.AdmNo.Text = user
-            Form3.Show()
+            'Form3.AdmNo.Text = user
+            'Form3.Show()
             Me.Hide()
         Else
             MessageBox.Show("Incorrect Password")
