@@ -88,6 +88,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MainDbDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="My Project\AddLecturer.Designer.vb">
+      <DependentUpon>AddLecturer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AddLecturer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AddUnits.Designer.vb">
+      <DependentUpon>AddUnits.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AddUnits.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AdmitStudent.Designer.vb">
       <DependentUpon>AdmitStudent.vb</DependentUpon>
     </Compile>
@@ -99,6 +111,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\CoursesForm.Designer.vb">
+      <DependentUpon>CoursesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\CoursesForm.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\Form2.Designer.vb">
       <DependentUpon>Form2.vb</DependentUpon>
@@ -120,6 +138,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\AddLecturer.resx">
+      <DependentUpon>AddLecturer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\AddUnits.resx">
+      <DependentUpon>AddUnits.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\CoursesForm.resx">
+      <DependentUpon>CoursesForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>

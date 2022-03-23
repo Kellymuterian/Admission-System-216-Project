@@ -27,9 +27,9 @@ Partial Class Form2
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.AddCourse = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.AddUnit = New System.Windows.Forms.Button()
-        Me.AdmitStudent = New System.Windows.Forms.Button()
         Me.AddLecturer = New System.Windows.Forms.Button()
+        Me.AdmitStudent = New System.Windows.Forms.Button()
+        Me.AddUnit = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -50,7 +50,7 @@ Partial Class Form2
         '
         'AddCourse
         '
-        Me.AddCourse.Location = New System.Drawing.Point(354, 179)
+        Me.AddCourse.Location = New System.Drawing.Point(354, 126)
         Me.AddCourse.Name = "AddCourse"
         Me.AddCourse.Size = New System.Drawing.Size(183, 55)
         Me.AddCourse.TabIndex = 1
@@ -67,43 +67,43 @@ Partial Class Form2
         Me.GroupBox1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(4, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(990, 637)
+        Me.GroupBox1.Size = New System.Drawing.Size(962, 577)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Admin Page"
         '
-        'AddUnit
-        '
-        Me.AddUnit.Location = New System.Drawing.Point(354, 253)
-        Me.AddUnit.Name = "AddUnit"
-        Me.AddUnit.Size = New System.Drawing.Size(183, 55)
-        Me.AddUnit.TabIndex = 2
-        Me.AddUnit.Text = "Add Unit"
-        Me.AddUnit.UseVisualStyleBackColor = True
-        '
-        'AdmitStudent
-        '
-        Me.AdmitStudent.Location = New System.Drawing.Point(354, 325)
-        Me.AdmitStudent.Name = "AdmitStudent"
-        Me.AdmitStudent.Size = New System.Drawing.Size(183, 55)
-        Me.AdmitStudent.TabIndex = 3
-        Me.AdmitStudent.Text = "Admit Student"
-        Me.AdmitStudent.UseVisualStyleBackColor = True
-        '
         'AddLecturer
         '
-        Me.AddLecturer.Location = New System.Drawing.Point(354, 401)
+        Me.AddLecturer.Location = New System.Drawing.Point(354, 359)
         Me.AddLecturer.Name = "AddLecturer"
         Me.AddLecturer.Size = New System.Drawing.Size(183, 55)
         Me.AddLecturer.TabIndex = 4
         Me.AddLecturer.Text = "Add Lecturer"
         Me.AddLecturer.UseVisualStyleBackColor = True
         '
+        'AdmitStudent
+        '
+        Me.AdmitStudent.Location = New System.Drawing.Point(354, 267)
+        Me.AdmitStudent.Name = "AdmitStudent"
+        Me.AdmitStudent.Size = New System.Drawing.Size(183, 55)
+        Me.AdmitStudent.TabIndex = 3
+        Me.AdmitStudent.Text = "Admit Student"
+        Me.AdmitStudent.UseVisualStyleBackColor = True
+        '
+        'AddUnit
+        '
+        Me.AddUnit.Location = New System.Drawing.Point(354, 187)
+        Me.AddUnit.Name = "AddUnit"
+        Me.AddUnit.Size = New System.Drawing.Size(183, 55)
+        Me.AddUnit.TabIndex = 2
+        Me.AddUnit.Text = "Add Unit"
+        Me.AddUnit.UseVisualStyleBackColor = True
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(994, 651)
+        Me.ClientSize = New System.Drawing.Size(867, 428)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form2"
         Me.Text = "Form2"
