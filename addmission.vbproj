@@ -121,6 +121,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\AdmitStudent.resx">
+      <DependentUpon>AdmitStudent.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
