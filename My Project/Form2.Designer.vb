@@ -58,8 +58,8 @@ Partial Class Form2
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.AddLecturer)
-        Me.GroupBox1.Controls.Add(Me.AdmitStudents)
-        Me.GroupBox1.Controls.Add(Me.AddUnit)
+        ' Me.GroupBox1.Controls.Add(Me.AdmitStudents)
+        '        Me.GroupBox1.Controls.Add(Me.AddUnit)
         Me.GroupBox1.Controls.Add(Me.AddCourse)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -81,12 +81,12 @@ Partial Class Form2
         '
         'AdmitStudent
         '
-        Me.AdmitStudent.Location = New System.Drawing.Point(354, 325)
-        Me.AdmitStudent.Name = "AdmitStudent"
-        Me.AdmitStudent.Size = New System.Drawing.Size(183, 55)
-        Me.AdmitStudent.TabIndex = 3
-        Me.AdmitStudent.Text = "Admit Student"
-        Me.AdmitStudent.UseVisualStyleBackColor = True
+        '   Me.AdmitStudent.Location = New System.Drawing.Point(354, 325)
+        '  Me.AdmitStudent.Name = "AdmitStudent"
+        ' Me.AdmitStudent.Size = New System.Drawing.Size(183, 55)
+        'Me.AdmitStudent.TabIndex = 3
+        'Me.AdmitStudent.Text = "Admit Student"
+        'Me.AdmitStudent.UseVisualStyleBackColor = True
         '
         'AddLecturer
         '
