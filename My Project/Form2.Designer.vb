@@ -27,7 +27,7 @@ Partial Class Form2
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.AddCourse = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.AddLecturer = New System.Windows.Forms.Button()
+        Me.AdmtStdnt = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,51 +57,31 @@ Partial Class Form2
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.AddLecturer)
-        ' Me.GroupBox1.Controls.Add(Me.AdmitStudents)
-        '        Me.GroupBox1.Controls.Add(Me.AddUnit)
+        Me.GroupBox1.Controls.Add(Me.AdmtStdnt)
         Me.GroupBox1.Controls.Add(Me.AddCourse)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(4, 2)
+        Me.GroupBox1.Location = New System.Drawing.Point(1, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(962, 577)
+        Me.GroupBox1.Size = New System.Drawing.Size(1008, 665)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Admin Page"
         '
-        'AddUnit
+        'AdmtStdnt
         '
-        Me.AddLecturer.Location = New System.Drawing.Point(354, 359)
-        Me.AddLecturer.Name = "AddLecturer"
-        Me.AddLecturer.Size = New System.Drawing.Size(183, 55)
-        Me.AddLecturer.TabIndex = 4
-        Me.AddLecturer.Text = "Add Lecturer"
-        Me.AddLecturer.UseVisualStyleBackColor = True
-        '
-        'AdmitStudent
-        '
-        '   Me.AdmitStudent.Location = New System.Drawing.Point(354, 325)
-        '  Me.AdmitStudent.Name = "AdmitStudent"
-        ' Me.AdmitStudent.Size = New System.Drawing.Size(183, 55)
-        'Me.AdmitStudent.TabIndex = 3
-        'Me.AdmitStudent.Text = "Admit Student"
-        'Me.AdmitStudent.UseVisualStyleBackColor = True
-        '
-        'AddLecturer
-        '
-        Me.AddLecturer.Location = New System.Drawing.Point(354, 401)
-        Me.AddLecturer.Name = "AddLecturer"
-        Me.AddLecturer.Size = New System.Drawing.Size(183, 55)
-        Me.AddLecturer.TabIndex = 4
-        Me.AddLecturer.Text = "Add Lecturer"
-        Me.AddLecturer.UseVisualStyleBackColor = True
+        Me.AdmtStdnt.Location = New System.Drawing.Point(354, 213)
+        Me.AdmtStdnt.Name = "AdmtStdnt"
+        Me.AdmtStdnt.Size = New System.Drawing.Size(183, 55)
+        Me.AdmtStdnt.TabIndex = 5
+        Me.AdmtStdnt.Text = "Admit Student"
+        Me.AdmtStdnt.UseVisualStyleBackColor = True
         '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(867, 428)
+        Me.ClientSize = New System.Drawing.Size(1021, 672)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form2"
         Me.Text = "Form2"
@@ -115,7 +95,7 @@ Partial Class Form2
     Friend WithEvents Timer1 As Timer
     Friend WithEvents AddCourse As Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents AddLecturer As Button
     Friend WithEvents AdmitStudents As Button
     Friend WithEvents AddUnit As Button
+    Friend WithEvents AdmtStdnt As Button
 End Class
