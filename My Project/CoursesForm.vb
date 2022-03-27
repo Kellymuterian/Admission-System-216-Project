@@ -1,8 +1,8 @@
 ﻿Imports System.Data.OleDb
 Public Class CoursesForm
     Private Sub CoursesForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\addmission\MainDb.mdb")
+        Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\Source\Repos\Admission\MainDb.mdb")
+        ' Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\addmission\MainDb.mdb")
         conn.Open()
         Dim cmd As New OleDbCommand("Select Description FROM Units order by Description", conn)
         Dim myreader As OleDbDataReader = cmd.ExecuteReader
