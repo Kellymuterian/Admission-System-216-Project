@@ -23,12 +23,9 @@ Partial Class AdmitStudent
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.ExitAdmitStudents = New System.Windows.Forms.Button()
-        Me.StdCourse = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Mis = New System.Windows.Forms.RadioButton()
-        Me.ActurialScience = New System.Windows.Forms.RadioButton()
-        Me.ComputerScience = New System.Windows.Forms.RadioButton()
         Me.AdmitStd = New System.Windows.Forms.Button()
         Me.Female = New System.Windows.Forms.RadioButton()
         Me.Male = New System.Windows.Forms.RadioButton()
@@ -37,27 +34,21 @@ Partial Class AdmitStudent
         Me.Label5 = New System.Windows.Forms.Label()
         Me.AdmDate = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.StudentCourse = New System.Windows.Forms.Label()
         Me.StudentNames = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.StudentAdm = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MainDbDataSet1 = New addmission.MainDbDataSet()
-        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.MainDbDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.CheckedListBox1)
+        Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.ExitAdmitStudents)
-        Me.GroupBox1.Controls.Add(Me.StdCourse)
         Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Mis)
-        Me.GroupBox1.Controls.Add(Me.ActurialScience)
-        Me.GroupBox1.Controls.Add(Me.ComputerScience)
         Me.GroupBox1.Controls.Add(Me.AdmitStd)
         Me.GroupBox1.Controls.Add(Me.Female)
         Me.GroupBox1.Controls.Add(Me.Male)
@@ -66,7 +57,6 @@ Partial Class AdmitStudent
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.AdmDate)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.StudentCourse)
         Me.GroupBox1.Controls.Add(Me.StudentNames)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.StudentAdm)
@@ -80,21 +70,22 @@ Partial Class AdmitStudent
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Admision Form"
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(154, 205)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(416, 30)
+        Me.ComboBox1.TabIndex = 1
+        '
         'ExitAdmitStudents
         '
-        Me.ExitAdmitStudents.Location = New System.Drawing.Point(363, 444)
+        Me.ExitAdmitStudents.Location = New System.Drawing.Point(363, 398)
         Me.ExitAdmitStudents.Name = "ExitAdmitStudents"
         Me.ExitAdmitStudents.Size = New System.Drawing.Size(167, 52)
         Me.ExitAdmitStudents.TabIndex = 21
         Me.ExitAdmitStudents.Text = "Exit"
         Me.ExitAdmitStudents.UseVisualStyleBackColor = True
-        '
-        'StdCourse
-        '
-        Me.StdCourse.Location = New System.Drawing.Point(154, 206)
-        Me.StdCourse.Name = "StdCourse"
-        Me.StdCourse.Size = New System.Drawing.Size(416, 29)
-        Me.StdCourse.TabIndex = 20
         '
         'Label7
         '
@@ -106,47 +97,11 @@ Partial Class AdmitStudent
         Me.Label7.TabIndex = 19
         Me.Label7.Text = "Course"
         '
-        'Mis
-        '
-        Me.Mis.AutoSize = True
-        Me.Mis.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Mis.Location = New System.Drawing.Point(538, 256)
-        Me.Mis.Name = "Mis"
-        Me.Mis.Size = New System.Drawing.Size(56, 25)
-        Me.Mis.TabIndex = 18
-        Me.Mis.TabStop = True
-        Me.Mis.Text = "MIS"
-        Me.Mis.UseVisualStyleBackColor = True
-        '
-        'ActurialScience
-        '
-        Me.ActurialScience.AutoSize = True
-        Me.ActurialScience.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ActurialScience.Location = New System.Drawing.Point(354, 256)
-        Me.ActurialScience.Name = "ActurialScience"
-        Me.ActurialScience.Size = New System.Drawing.Size(153, 25)
-        Me.ActurialScience.TabIndex = 17
-        Me.ActurialScience.TabStop = True
-        Me.ActurialScience.Text = "Acturial Science"
-        Me.ActurialScience.UseVisualStyleBackColor = True
-        '
-        'ComputerScience
-        '
-        Me.ComputerScience.AutoSize = True
-        Me.ComputerScience.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComputerScience.Location = New System.Drawing.Point(151, 256)
-        Me.ComputerScience.Name = "ComputerScience"
-        Me.ComputerScience.Size = New System.Drawing.Size(170, 25)
-        Me.ComputerScience.TabIndex = 16
-        Me.ComputerScience.TabStop = True
-        Me.ComputerScience.Text = "Computer Science"
-        Me.ComputerScience.UseVisualStyleBackColor = True
-        '
         'AdmitStd
         '
         Me.AdmitStd.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.AdmitStd.ForeColor = System.Drawing.Color.White
-        Me.AdmitStd.Location = New System.Drawing.Point(154, 444)
+        Me.AdmitStd.Location = New System.Drawing.Point(154, 398)
         Me.AdmitStd.Name = "AdmitStd"
         Me.AdmitStd.Size = New System.Drawing.Size(167, 52)
         Me.AdmitStd.TabIndex = 15
@@ -156,7 +111,7 @@ Partial Class AdmitStudent
         'Female
         '
         Me.Female.AutoSize = True
-        Me.Female.Location = New System.Drawing.Point(282, 382)
+        Me.Female.Location = New System.Drawing.Point(282, 336)
         Me.Female.Name = "Female"
         Me.Female.Size = New System.Drawing.Size(94, 26)
         Me.Female.TabIndex = 14
@@ -167,7 +122,7 @@ Partial Class AdmitStudent
         'Male
         '
         Me.Male.AutoSize = True
-        Me.Male.Location = New System.Drawing.Point(151, 382)
+        Me.Male.Location = New System.Drawing.Point(151, 336)
         Me.Male.Name = "Male"
         Me.Male.Size = New System.Drawing.Size(71, 26)
         Me.Male.TabIndex = 13
@@ -179,7 +134,7 @@ Partial Class AdmitStudent
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(77, 385)
+        Me.Label6.Location = New System.Drawing.Point(77, 339)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(68, 21)
         Me.Label6.TabIndex = 12
@@ -187,7 +142,7 @@ Partial Class AdmitStudent
         '
         'GradDate
         '
-        Me.GradDate.Location = New System.Drawing.Point(154, 344)
+        Me.GradDate.Location = New System.Drawing.Point(154, 298)
         Me.GradDate.Name = "GradDate"
         Me.GradDate.Size = New System.Drawing.Size(416, 29)
         Me.GradDate.TabIndex = 11
@@ -196,7 +151,7 @@ Partial Class AdmitStudent
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(42, 348)
+        Me.Label5.Location = New System.Drawing.Point(42, 302)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(103, 21)
         Me.Label5.TabIndex = 10
@@ -204,7 +159,7 @@ Partial Class AdmitStudent
         '
         'AdmDate
         '
-        Me.AdmDate.Location = New System.Drawing.Point(154, 300)
+        Me.AdmDate.Location = New System.Drawing.Point(154, 254)
         Me.AdmDate.Name = "AdmDate"
         Me.AdmDate.Size = New System.Drawing.Size(416, 29)
         Me.AdmDate.TabIndex = 9
@@ -213,21 +168,11 @@ Partial Class AdmitStudent
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(13, 304)
+        Me.Label4.Location = New System.Drawing.Point(13, 258)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(135, 21)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Admission Date"
-        '
-        'StudentCourse
-        '
-        Me.StudentCourse.AutoSize = True
-        Me.StudentCourse.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StudentCourse.Location = New System.Drawing.Point(85, 258)
-        Me.StudentCourse.Name = "StudentCourse"
-        Me.StudentCourse.Size = New System.Drawing.Size(62, 21)
-        Me.StudentCourse.TabIndex = 5
-        Me.StudentCourse.Text = "Course"
         '
         'StudentNames
         '
@@ -278,14 +223,6 @@ Partial Class AdmitStudent
         Me.MainDbDataSet1.DataSetName = "MainDbDataSet"
         Me.MainDbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'CheckedListBox1
-        '
-        Me.CheckedListBox1.FormattingEnabled = True
-        Me.CheckedListBox1.Location = New System.Drawing.Point(688, 114)
-        Me.CheckedListBox1.Name = "CheckedListBox1"
-        Me.CheckedListBox1.Size = New System.Drawing.Size(509, 172)
-        Me.CheckedListBox1.TabIndex = 22
-        '
         'AdmitStudent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -307,7 +244,6 @@ Partial Class AdmitStudent
     Friend WithEvents Label5 As Label
     Friend WithEvents AdmDate As DateTimePicker
     Friend WithEvents Label4 As Label
-    Friend WithEvents StudentCourse As Label
     Friend WithEvents StudentNames As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents StudentAdm As TextBox
@@ -316,12 +252,8 @@ Partial Class AdmitStudent
     Friend WithEvents Male As RadioButton
     Friend WithEvents AdmitStd As Button
     Friend WithEvents Female As RadioButton
-    Friend WithEvents Mis As RadioButton
-    Friend WithEvents ActurialScience As RadioButton
-    Friend WithEvents ComputerScience As RadioButton
     Friend WithEvents MainDbDataSet1 As MainDbDataSet
-    Friend WithEvents StdCourse As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents ExitAdmitStudents As Button
-    Friend WithEvents CheckedListBox1 As CheckedListBox
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
