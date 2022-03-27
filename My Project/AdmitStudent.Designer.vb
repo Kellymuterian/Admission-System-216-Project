@@ -23,13 +23,19 @@ Partial Class AdmitStudent
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ExitAdmitStudents = New System.Windows.Forms.Button()
+        Me.StdCourse = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Mis = New System.Windows.Forms.RadioButton()
+        Me.ActurialScience = New System.Windows.Forms.RadioButton()
+        Me.ComputerScience = New System.Windows.Forms.RadioButton()
         Me.AdmitStd = New System.Windows.Forms.Button()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.Female = New System.Windows.Forms.RadioButton()
+        Me.Male = New System.Windows.Forms.RadioButton()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.GradDate = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.AdmDate = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.StudentCourse = New System.Windows.Forms.Label()
         Me.StudentNames = New System.Windows.Forms.TextBox()
@@ -38,25 +44,27 @@ Partial Class AdmitStudent
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MainDbDataSet1 = New addmission.MainDbDataSet()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
+        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.MainDbDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.RadioButton5)
-        Me.GroupBox1.Controls.Add(Me.RadioButton3)
-        Me.GroupBox1.Controls.Add(Me.RadioButton4)
+        Me.GroupBox1.Controls.Add(Me.CheckedListBox1)
+        Me.GroupBox1.Controls.Add(Me.ExitAdmitStudents)
+        Me.GroupBox1.Controls.Add(Me.StdCourse)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Mis)
+        Me.GroupBox1.Controls.Add(Me.ActurialScience)
+        Me.GroupBox1.Controls.Add(Me.ComputerScience)
         Me.GroupBox1.Controls.Add(Me.AdmitStd)
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.Controls.Add(Me.Female)
+        Me.GroupBox1.Controls.Add(Me.Male)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker2)
+        Me.GroupBox1.Controls.Add(Me.GradDate)
         Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox1.Controls.Add(Me.AdmDate)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.StudentCourse)
         Me.GroupBox1.Controls.Add(Me.StudentNames)
@@ -67,81 +75,145 @@ Partial Class AdmitStudent
         Me.GroupBox1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1031, 870)
+        Me.GroupBox1.Size = New System.Drawing.Size(1220, 870)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Admision Form"
         '
+        'ExitAdmitStudents
+        '
+        Me.ExitAdmitStudents.Location = New System.Drawing.Point(363, 444)
+        Me.ExitAdmitStudents.Name = "ExitAdmitStudents"
+        Me.ExitAdmitStudents.Size = New System.Drawing.Size(167, 52)
+        Me.ExitAdmitStudents.TabIndex = 21
+        Me.ExitAdmitStudents.Text = "Exit"
+        Me.ExitAdmitStudents.UseVisualStyleBackColor = True
+        '
+        'StdCourse
+        '
+        Me.StdCourse.Location = New System.Drawing.Point(154, 206)
+        Me.StdCourse.Name = "StdCourse"
+        Me.StdCourse.Size = New System.Drawing.Size(416, 29)
+        Me.StdCourse.TabIndex = 20
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(85, 210)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(62, 21)
+        Me.Label7.TabIndex = 19
+        Me.Label7.Text = "Course"
+        '
+        'Mis
+        '
+        Me.Mis.AutoSize = True
+        Me.Mis.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Mis.Location = New System.Drawing.Point(538, 256)
+        Me.Mis.Name = "Mis"
+        Me.Mis.Size = New System.Drawing.Size(56, 25)
+        Me.Mis.TabIndex = 18
+        Me.Mis.TabStop = True
+        Me.Mis.Text = "MIS"
+        Me.Mis.UseVisualStyleBackColor = True
+        '
+        'ActurialScience
+        '
+        Me.ActurialScience.AutoSize = True
+        Me.ActurialScience.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ActurialScience.Location = New System.Drawing.Point(354, 256)
+        Me.ActurialScience.Name = "ActurialScience"
+        Me.ActurialScience.Size = New System.Drawing.Size(153, 25)
+        Me.ActurialScience.TabIndex = 17
+        Me.ActurialScience.TabStop = True
+        Me.ActurialScience.Text = "Acturial Science"
+        Me.ActurialScience.UseVisualStyleBackColor = True
+        '
+        'ComputerScience
+        '
+        Me.ComputerScience.AutoSize = True
+        Me.ComputerScience.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComputerScience.Location = New System.Drawing.Point(151, 256)
+        Me.ComputerScience.Name = "ComputerScience"
+        Me.ComputerScience.Size = New System.Drawing.Size(170, 25)
+        Me.ComputerScience.TabIndex = 16
+        Me.ComputerScience.TabStop = True
+        Me.ComputerScience.Text = "Computer Science"
+        Me.ComputerScience.UseVisualStyleBackColor = True
+        '
         'AdmitStd
         '
-        Me.AdmitStd.Location = New System.Drawing.Point(149, 381)
+        Me.AdmitStd.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.AdmitStd.ForeColor = System.Drawing.Color.White
+        Me.AdmitStd.Location = New System.Drawing.Point(154, 444)
         Me.AdmitStd.Name = "AdmitStd"
-        Me.AdmitStd.Size = New System.Drawing.Size(222, 52)
+        Me.AdmitStd.Size = New System.Drawing.Size(167, 52)
         Me.AdmitStd.TabIndex = 15
         Me.AdmitStd.Text = "Admit"
-        Me.AdmitStd.UseVisualStyleBackColor = True
+        Me.AdmitStd.UseVisualStyleBackColor = False
         '
-        'RadioButton2
+        'Female
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(277, 319)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(94, 26)
-        Me.RadioButton2.TabIndex = 14
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Female"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.Female.AutoSize = True
+        Me.Female.Location = New System.Drawing.Point(282, 382)
+        Me.Female.Name = "Female"
+        Me.Female.Size = New System.Drawing.Size(94, 26)
+        Me.Female.TabIndex = 14
+        Me.Female.TabStop = True
+        Me.Female.Text = "Female"
+        Me.Female.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'Male
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(146, 319)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(71, 26)
-        Me.RadioButton1.TabIndex = 13
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Male"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.Male.AutoSize = True
+        Me.Male.Location = New System.Drawing.Point(151, 382)
+        Me.Male.Name = "Male"
+        Me.Male.Size = New System.Drawing.Size(71, 26)
+        Me.Male.TabIndex = 13
+        Me.Male.TabStop = True
+        Me.Male.Text = "Male"
+        Me.Male.UseVisualStyleBackColor = True
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(72, 322)
+        Me.Label6.Location = New System.Drawing.Point(77, 385)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(68, 21)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Gender"
         '
-        'DateTimePicker2
+        'GradDate
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(149, 281)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(416, 29)
-        Me.DateTimePicker2.TabIndex = 11
+        Me.GradDate.Location = New System.Drawing.Point(154, 344)
+        Me.GradDate.Name = "GradDate"
+        Me.GradDate.Size = New System.Drawing.Size(416, 29)
+        Me.GradDate.TabIndex = 11
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(37, 285)
+        Me.Label5.Location = New System.Drawing.Point(42, 348)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(103, 21)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Expiry Date"
         '
-        'DateTimePicker1
+        'AdmDate
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(149, 237)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(416, 29)
-        Me.DateTimePicker1.TabIndex = 9
+        Me.AdmDate.Location = New System.Drawing.Point(154, 300)
+        Me.AdmDate.Name = "AdmDate"
+        Me.AdmDate.Size = New System.Drawing.Size(416, 29)
+        Me.AdmDate.TabIndex = 9
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(8, 241)
+        Me.Label4.Location = New System.Drawing.Point(13, 304)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(135, 21)
         Me.Label4.TabIndex = 7
@@ -151,7 +223,7 @@ Partial Class AdmitStudent
         '
         Me.StudentCourse.AutoSize = True
         Me.StudentCourse.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StudentCourse.Location = New System.Drawing.Point(80, 195)
+        Me.StudentCourse.Location = New System.Drawing.Point(85, 258)
         Me.StudentCourse.Name = "StudentCourse"
         Me.StudentCourse.Size = New System.Drawing.Size(62, 21)
         Me.StudentCourse.TabIndex = 5
@@ -159,7 +231,7 @@ Partial Class AdmitStudent
         '
         'StudentNames
         '
-        Me.StudentNames.Location = New System.Drawing.Point(149, 140)
+        Me.StudentNames.Location = New System.Drawing.Point(154, 156)
         Me.StudentNames.Name = "StudentNames"
         Me.StudentNames.Size = New System.Drawing.Size(416, 29)
         Me.StudentNames.TabIndex = 4
@@ -168,7 +240,7 @@ Partial Class AdmitStudent
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(80, 144)
+        Me.Label3.Location = New System.Drawing.Point(85, 160)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(60, 21)
         Me.Label3.TabIndex = 3
@@ -176,7 +248,7 @@ Partial Class AdmitStudent
         '
         'StudentAdm
         '
-        Me.StudentAdm.Location = New System.Drawing.Point(149, 94)
+        Me.StudentAdm.Location = New System.Drawing.Point(154, 110)
         Me.StudentAdm.Name = "StudentAdm"
         Me.StudentAdm.Size = New System.Drawing.Size(416, 29)
         Me.StudentAdm.TabIndex = 2
@@ -185,7 +257,7 @@ Partial Class AdmitStudent
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(61, 98)
+        Me.Label2.Location = New System.Drawing.Point(66, 114)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 21)
         Me.Label2.TabIndex = 1
@@ -206,47 +278,19 @@ Partial Class AdmitStudent
         Me.MainDbDataSet1.DataSetName = "MainDbDataSet"
         Me.MainDbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
-        'RadioButton3
+        'CheckedListBox1
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton3.Location = New System.Drawing.Point(349, 193)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(153, 25)
-        Me.RadioButton3.TabIndex = 17
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Acturial Science"
-        Me.RadioButton3.UseVisualStyleBackColor = True
-        '
-        'RadioButton4
-        '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton4.Location = New System.Drawing.Point(146, 193)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(170, 25)
-        Me.RadioButton4.TabIndex = 16
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "Computer Science"
-        Me.RadioButton4.UseVisualStyleBackColor = True
-        '
-        'RadioButton5
-        '
-        Me.RadioButton5.AutoSize = True
-        Me.RadioButton5.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton5.Location = New System.Drawing.Point(533, 193)
-        Me.RadioButton5.Name = "RadioButton5"
-        Me.RadioButton5.Size = New System.Drawing.Size(56, 25)
-        Me.RadioButton5.TabIndex = 18
-        Me.RadioButton5.TabStop = True
-        Me.RadioButton5.Text = "MIS"
-        Me.RadioButton5.UseVisualStyleBackColor = True
+        Me.CheckedListBox1.FormattingEnabled = True
+        Me.CheckedListBox1.Location = New System.Drawing.Point(688, 114)
+        Me.CheckedListBox1.Name = "CheckedListBox1"
+        Me.CheckedListBox1.Size = New System.Drawing.Size(509, 172)
+        Me.CheckedListBox1.TabIndex = 22
         '
         'AdmitStudent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1043, 873)
+        Me.ClientSize = New System.Drawing.Size(1232, 873)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "AdmitStudent"
         Me.Text = "AdmitStudent"
@@ -259,9 +303,9 @@ Partial Class AdmitStudent
 
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents GradDate As DateTimePicker
     Friend WithEvents Label5 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents AdmDate As DateTimePicker
     Friend WithEvents Label4 As Label
     Friend WithEvents StudentCourse As Label
     Friend WithEvents StudentNames As TextBox
@@ -269,11 +313,15 @@ Partial Class AdmitStudent
     Friend WithEvents StudentAdm As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents Male As RadioButton
     Friend WithEvents AdmitStd As Button
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton5 As RadioButton
-    Friend WithEvents RadioButton3 As RadioButton
-    Friend WithEvents RadioButton4 As RadioButton
+    Friend WithEvents Female As RadioButton
+    Friend WithEvents Mis As RadioButton
+    Friend WithEvents ActurialScience As RadioButton
+    Friend WithEvents ComputerScience As RadioButton
     Friend WithEvents MainDbDataSet1 As MainDbDataSet
+    Friend WithEvents StdCourse As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents ExitAdmitStudents As Button
+    Friend WithEvents CheckedListBox1 As CheckedListBox
 End Class

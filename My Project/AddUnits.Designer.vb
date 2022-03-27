@@ -32,11 +32,13 @@ Partial Class AddUnits
         Me.Label3 = New System.Windows.Forms.Label()
         Me.UnitName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.ExitAddUnits = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.ExitAddUnits)
         Me.GroupBox1.Controls.Add(Me.AddUnit)
         Me.GroupBox1.Controls.Add(Me.Credits)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -57,12 +59,14 @@ Partial Class AddUnits
         '
         'AddUnit
         '
+        Me.AddUnit.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.AddUnit.ForeColor = System.Drawing.Color.White
         Me.AddUnit.Location = New System.Drawing.Point(246, 422)
         Me.AddUnit.Name = "AddUnit"
         Me.AddUnit.Size = New System.Drawing.Size(173, 55)
         Me.AddUnit.TabIndex = 27
         Me.AddUnit.Text = "Add Unit"
-        Me.AddUnit.UseVisualStyleBackColor = True
+        Me.AddUnit.UseVisualStyleBackColor = False
         '
         'Credits
         '
@@ -132,6 +136,15 @@ Partial Class AddUnits
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "Name"
         '
+        'ExitAddUnits
+        '
+        Me.ExitAddUnits.Location = New System.Drawing.Point(489, 422)
+        Me.ExitAddUnits.Name = "ExitAddUnits"
+        Me.ExitAddUnits.Size = New System.Drawing.Size(173, 55)
+        Me.ExitAddUnits.TabIndex = 28
+        Me.ExitAddUnits.Text = "Exit"
+        Me.ExitAddUnits.UseVisualStyleBackColor = True
+        '
         'AddUnits
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -155,4 +168,5 @@ Partial Class AddUnits
     Friend WithEvents Label3 As Label
     Friend WithEvents UnitName As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents ExitAddUnits As Button
 End Class

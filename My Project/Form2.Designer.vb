@@ -28,6 +28,7 @@ Partial Class Form2
         Me.AddCourse = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.AdmtStdnt = New System.Windows.Forms.Button()
+        Me.AddUnitsAdmin = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,6 +58,7 @@ Partial Class Form2
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.AddUnitsAdmin)
         Me.GroupBox1.Controls.Add(Me.AdmtStdnt)
         Me.GroupBox1.Controls.Add(Me.AddCourse)
         Me.GroupBox1.Controls.Add(Me.Label1)
@@ -70,12 +72,21 @@ Partial Class Form2
         '
         'AdmtStdnt
         '
-        Me.AdmtStdnt.Location = New System.Drawing.Point(354, 213)
+        Me.AdmtStdnt.Location = New System.Drawing.Point(354, 313)
         Me.AdmtStdnt.Name = "AdmtStdnt"
         Me.AdmtStdnt.Size = New System.Drawing.Size(183, 55)
         Me.AdmtStdnt.TabIndex = 5
         Me.AdmtStdnt.Text = "Admit Student"
         Me.AdmtStdnt.UseVisualStyleBackColor = True
+        '
+        'AddUnitsAdmin
+        '
+        Me.AddUnitsAdmin.Location = New System.Drawing.Point(354, 220)
+        Me.AddUnitsAdmin.Name = "AddUnitsAdmin"
+        Me.AddUnitsAdmin.Size = New System.Drawing.Size(183, 55)
+        Me.AddUnitsAdmin.TabIndex = 6
+        Me.AddUnitsAdmin.Text = "Add Units"
+        Me.AddUnitsAdmin.UseVisualStyleBackColor = True
         '
         'Form2
         '
@@ -98,4 +109,5 @@ Partial Class Form2
     Friend WithEvents AdmitStudents As Button
     Friend WithEvents AddUnit As Button
     Friend WithEvents AdmtStdnt As Button
+    Friend WithEvents AddUnitsAdmin As Button
 End Class

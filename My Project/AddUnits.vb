@@ -22,4 +22,9 @@ Public Class AddUnits
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub ExitAddUnits_Click(sender As Object, e As EventArgs) Handles ExitAddUnits.Click
+        Form2.Show()
+        Me.Hide()
+    End Sub
 End Class
