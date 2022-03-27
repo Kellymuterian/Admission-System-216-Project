@@ -27,8 +27,9 @@ Partial Class Form2
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.AddCourse = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.AdmtStdnt = New System.Windows.Forms.Button()
         Me.AddUnitsAdmin = New System.Windows.Forms.Button()
+        Me.AdmtStdnt = New System.Windows.Forms.Button()
+        Me.LogOut = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -58,6 +59,7 @@ Partial Class Form2
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.LogOut)
         Me.GroupBox1.Controls.Add(Me.AddUnitsAdmin)
         Me.GroupBox1.Controls.Add(Me.AdmtStdnt)
         Me.GroupBox1.Controls.Add(Me.AddCourse)
@@ -70,6 +72,15 @@ Partial Class Form2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Admin Page"
         '
+        'AddUnitsAdmin
+        '
+        Me.AddUnitsAdmin.Location = New System.Drawing.Point(354, 220)
+        Me.AddUnitsAdmin.Name = "AddUnitsAdmin"
+        Me.AddUnitsAdmin.Size = New System.Drawing.Size(183, 55)
+        Me.AddUnitsAdmin.TabIndex = 6
+        Me.AddUnitsAdmin.Text = "Add Units"
+        Me.AddUnitsAdmin.UseVisualStyleBackColor = True
+        '
         'AdmtStdnt
         '
         Me.AdmtStdnt.Location = New System.Drawing.Point(354, 313)
@@ -79,14 +90,16 @@ Partial Class Form2
         Me.AdmtStdnt.Text = "Admit Student"
         Me.AdmtStdnt.UseVisualStyleBackColor = True
         '
-        'AddUnitsAdmin
+        'LogOut
         '
-        Me.AddUnitsAdmin.Location = New System.Drawing.Point(354, 220)
-        Me.AddUnitsAdmin.Name = "AddUnitsAdmin"
-        Me.AddUnitsAdmin.Size = New System.Drawing.Size(183, 55)
-        Me.AddUnitsAdmin.TabIndex = 6
-        Me.AddUnitsAdmin.Text = "Add Units"
-        Me.AddUnitsAdmin.UseVisualStyleBackColor = True
+        Me.LogOut.BackColor = System.Drawing.Color.LightCoral
+        Me.LogOut.ForeColor = System.Drawing.Color.White
+        Me.LogOut.Location = New System.Drawing.Point(354, 419)
+        Me.LogOut.Name = "LogOut"
+        Me.LogOut.Size = New System.Drawing.Size(183, 57)
+        Me.LogOut.TabIndex = 23
+        Me.LogOut.Text = "Log Out"
+        Me.LogOut.UseVisualStyleBackColor = False
         '
         'Form2
         '
@@ -110,4 +123,5 @@ Partial Class Form2
     Friend WithEvents AddUnit As Button
     Friend WithEvents AdmtStdnt As Button
     Friend WithEvents AddUnitsAdmin As Button
+    Friend WithEvents LogOut As Button
 End Class

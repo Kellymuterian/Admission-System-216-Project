@@ -24,102 +24,104 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.LoginBtn = New System.Windows.Forms.Button()
         Me.Password = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.UserName = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.PictureBox1)
         Me.GroupBox1.Controls.Add(Me.LoginBtn)
         Me.GroupBox1.Controls.Add(Me.Password)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.UserName)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(110, 154)
+        Me.GroupBox1.Location = New System.Drawing.Point(-2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(446, 279)
+        Me.GroupBox1.Size = New System.Drawing.Size(1208, 875)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Login"
+        Me.GroupBox1.Text = "Login Form"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(287, 168)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(233, 32)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "User Login Form"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(320, 114)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(155, 51)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'LoginBtn
         '
         Me.LoginBtn.BackColor = System.Drawing.Color.RoyalBlue
         Me.LoginBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.LoginBtn.Location = New System.Drawing.Point(146, 168)
+        Me.LoginBtn.Location = New System.Drawing.Point(228, 340)
         Me.LoginBtn.Name = "LoginBtn"
-        Me.LoginBtn.Size = New System.Drawing.Size(127, 41)
+        Me.LoginBtn.Size = New System.Drawing.Size(170, 61)
         Me.LoginBtn.TabIndex = 4
         Me.LoginBtn.Text = "Login"
         Me.LoginBtn.UseVisualStyleBackColor = False
         '
         'Password
         '
-        Me.Password.Location = New System.Drawing.Point(146, 118)
+        Me.Password.Location = New System.Drawing.Point(228, 288)
         Me.Password.Name = "Password"
-        Me.Password.Size = New System.Drawing.Size(261, 26)
+        Me.Password.Size = New System.Drawing.Size(359, 26)
         Me.Password.TabIndex = 3
         Me.Password.UseSystemPasswordChar = True
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(50, 121)
+        Me.Label2.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(132, 291)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(87, 18)
+        Me.Label2.Size = New System.Drawing.Size(86, 21)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Password"
         '
         'UserName
         '
-        Me.UserName.Location = New System.Drawing.Point(146, 69)
+        Me.UserName.Location = New System.Drawing.Point(228, 241)
         Me.UserName.Name = "UserName"
-        Me.UserName.Size = New System.Drawing.Size(261, 26)
+        Me.UserName.Size = New System.Drawing.Size(359, 26)
         Me.UserName.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(50, 72)
+        Me.Label1.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(132, 244)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(90, 18)
+        Me.Label1.Size = New System.Drawing.Size(90, 21)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Username"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(159, 50)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Red
-        Me.Button1.Location = New System.Drawing.Point(703, 507)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 26)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "EXIT"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(840, 456)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.ClientSize = New System.Drawing.Size(1211, 880)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -137,5 +139,5 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LoginBtn As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Label3 As Label
 End Class
