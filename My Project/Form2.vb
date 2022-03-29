@@ -14,4 +14,9 @@ Public Class Form2
         AddUnits.Show()
         Me.Hide()
     End Sub
+
+    Private Sub LogOut_Click(sender As Object, e As EventArgs) Handles LogOut.Click
+        Form1.Show()
+        Me.Hide()
+    End Sub
 End Class

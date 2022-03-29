@@ -227,7 +227,7 @@ Partial Class AdmitStudent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1232, 873)
+        Me.ClientSize = New System.Drawing.Size(1232, 749)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "AdmitStudent"
         Me.Text = "AdmitStudent"

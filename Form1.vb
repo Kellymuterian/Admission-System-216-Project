@@ -2,31 +2,38 @@
 Public Class Form1
     Dim db As OleDbConnection = New OleDbConnection()
     Private Sub LoginBtn_Click(sender As Object, e As EventArgs) Handles LoginBtn.Click
-        Dim command As String
-        db.ConnectionString = String.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\Source\Repos\Admission\MainDb.mdb")
-        db.Open()
-        command = "SELECT * FROM users WHERE [RegNo]=" & UserName.Text & " "
-        Dim user As String = UserName.Text
-        Dim cmd = New OleDbCommand(command, db)
         If (Password.Text = "Admin") Then
             Form2.Show()
             Me.Hide()
+            UserName.Clear()
+            Password.Clear()
         ElseIf (Password.Text = "student") Then
-            'Form3.AdmNo.Text = user
-            'Form3.Show()
-            Me.Hide()
+            db.ConnectionString = String.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\Source\Repos\Admission\MainDb.mdb")
+            'db.ConnectionString = String.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\addmission\MainDb.mdb")
+            db.Open()
+            Dim cmd As OleDbCommand = New OleDbCommand(String.Concat("SELECT * FROM Students WHERE AdmNo = @admissionNumber"), db)
+            cmd.Parameters.AddWithValue("@admissionNumber", UserName.Text)
+            Dim student As OleDbDataReader = cmd.ExecuteReader()
+            If student.Read = True Then
+                Portal.Tag = UserName.Text
+                Portal.Show()
+                UserName.Clear()
+                Password.Clear()
+                db.Close()
+                Me.Hide()
+            Else
+                MessageBox.Show("Student Doesn't exit on the database")
+                UserName.Clear()
+                Password.Clear()
+                db.Close()
+            End If
         Else
             MessageBox.Show("Incorrect Password")
+            UserName.Clear()
+            Password.Clear()
         End If
     End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Application.Exit()
-    End Sub
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub UserName_TextChanged(sender As Object, e As EventArgs) Handles UserName.TextChanged
-
     End Sub
 End Class
