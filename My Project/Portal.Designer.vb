@@ -24,6 +24,18 @@ Partial Class Portal
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Portal))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.MaxCredits = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.GradDate = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.AdmDate = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Status = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Course = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.UserName = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.StudentNames = New System.Windows.Forms.Label()
@@ -31,18 +43,6 @@ Partial Class Portal
         Me.LogOut = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Course = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Status = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.AdmDate = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.GradDate = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.MaxCredits = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -75,6 +75,127 @@ Partial Class Portal
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Student Portal"
+        '
+        'MaxCredits
+        '
+        Me.MaxCredits.AutoSize = True
+        Me.MaxCredits.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaxCredits.Location = New System.Drawing.Point(176, 242)
+        Me.MaxCredits.Name = "MaxCredits"
+        Me.MaxCredits.Size = New System.Drawing.Size(52, 23)
+        Me.MaxCredits.TabIndex = 38
+        Me.MaxCredits.Text = "NuN"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(29, 242)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(119, 23)
+        Me.Label11.TabIndex = 37
+        Me.Label11.Text = "Max Credits :"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(116, 426)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(151, 23)
+        Me.Label9.TabIndex = 36
+        Me.Label9.Text = "Units Registered "
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(1015, 106)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(150, 52)
+        Me.Button1.TabIndex = 35
+        Me.Button1.Text = "Enroll Units"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'GradDate
+        '
+        Me.GradDate.AutoSize = True
+        Me.GradDate.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GradDate.Location = New System.Drawing.Point(176, 358)
+        Me.GradDate.Name = "GradDate"
+        Me.GradDate.Size = New System.Drawing.Size(52, 23)
+        Me.GradDate.TabIndex = 34
+        Me.GradDate.Text = "NuN"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(-2, 358)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(150, 23)
+        Me.Label8.TabIndex = 33
+        Me.Label8.Text = "Exp Grad Date :"
+        '
+        'AdmDate
+        '
+        Me.AdmDate.AutoSize = True
+        Me.AdmDate.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AdmDate.Location = New System.Drawing.Point(176, 320)
+        Me.AdmDate.Name = "AdmDate"
+        Me.AdmDate.Size = New System.Drawing.Size(52, 23)
+        Me.AdmDate.TabIndex = 32
+        Me.AdmDate.Text = "NuN"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(36, 320)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(112, 23)
+        Me.Label7.TabIndex = 31
+        Me.Label7.Text = "Adm Date :"
+        '
+        'Status
+        '
+        Me.Status.AutoSize = True
+        Me.Status.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Status.Location = New System.Drawing.Point(176, 280)
+        Me.Status.Name = "Status"
+        Me.Status.Size = New System.Drawing.Size(52, 23)
+        Me.Status.TabIndex = 30
+        Me.Status.Text = "NuN"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(70, 280)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(74, 23)
+        Me.Label6.TabIndex = 29
+        Me.Label6.Text = "Status :"
+        '
+        'Course
+        '
+        Me.Course.AutoSize = True
+        Me.Course.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Course.Location = New System.Drawing.Point(176, 205)
+        Me.Course.Name = "Course"
+        Me.Course.Size = New System.Drawing.Size(52, 23)
+        Me.Course.TabIndex = 28
+        Me.Course.Text = "NuN"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(70, 205)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(78, 23)
+        Me.Label5.TabIndex = 27
+        Me.Label5.Text = "Course :"
         '
         'UserName
         '
@@ -145,127 +266,6 @@ Partial Class Portal
         Me.PictureBox1.Size = New System.Drawing.Size(155, 51)
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
-        '
-        'Course
-        '
-        Me.Course.AutoSize = True
-        Me.Course.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Course.Location = New System.Drawing.Point(176, 205)
-        Me.Course.Name = "Course"
-        Me.Course.Size = New System.Drawing.Size(52, 23)
-        Me.Course.TabIndex = 28
-        Me.Course.Text = "NuN"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(70, 205)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(78, 23)
-        Me.Label5.TabIndex = 27
-        Me.Label5.Text = "Course :"
-        '
-        'Status
-        '
-        Me.Status.AutoSize = True
-        Me.Status.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Status.Location = New System.Drawing.Point(176, 280)
-        Me.Status.Name = "Status"
-        Me.Status.Size = New System.Drawing.Size(52, 23)
-        Me.Status.TabIndex = 30
-        Me.Status.Text = "NuN"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(70, 280)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(74, 23)
-        Me.Label6.TabIndex = 29
-        Me.Label6.Text = "Status :"
-        '
-        'AdmDate
-        '
-        Me.AdmDate.AutoSize = True
-        Me.AdmDate.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AdmDate.Location = New System.Drawing.Point(176, 320)
-        Me.AdmDate.Name = "AdmDate"
-        Me.AdmDate.Size = New System.Drawing.Size(52, 23)
-        Me.AdmDate.TabIndex = 32
-        Me.AdmDate.Text = "NuN"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(36, 320)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(112, 23)
-        Me.Label7.TabIndex = 31
-        Me.Label7.Text = "Adm Date :"
-        '
-        'GradDate
-        '
-        Me.GradDate.AutoSize = True
-        Me.GradDate.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GradDate.Location = New System.Drawing.Point(176, 358)
-        Me.GradDate.Name = "GradDate"
-        Me.GradDate.Size = New System.Drawing.Size(52, 23)
-        Me.GradDate.TabIndex = 34
-        Me.GradDate.Text = "NuN"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(-2, 358)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(150, 23)
-        Me.Label8.TabIndex = 33
-        Me.Label8.Text = "Exp Grad Date :"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(1015, 106)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(150, 52)
-        Me.Button1.TabIndex = 35
-        Me.Button1.Text = "Enroll Units"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(116, 426)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(151, 23)
-        Me.Label9.TabIndex = 36
-        Me.Label9.Text = "Units Registered "
-        '
-        'MaxCredits
-        '
-        Me.MaxCredits.AutoSize = True
-        Me.MaxCredits.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaxCredits.Location = New System.Drawing.Point(176, 242)
-        Me.MaxCredits.Name = "MaxCredits"
-        Me.MaxCredits.Size = New System.Drawing.Size(52, 23)
-        Me.MaxCredits.TabIndex = 38
-        Me.MaxCredits.Text = "NuN"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Berlin Sans FB", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(29, 242)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(119, 23)
-        Me.Label11.TabIndex = 37
-        Me.Label11.Text = "Max Credits :"
         '
         'Portal
         '

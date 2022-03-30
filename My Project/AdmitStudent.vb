@@ -41,8 +41,8 @@ Public Class AdmitStudent
     End Sub
 
     Private Sub AdmitStudent_Load(sender As Object, e As EventArgs) Handles Me.Load
-        db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\Source\Repos\Admission\MainDb.mdb"
-        'db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\addmission\MainDb.mdb"
+        'db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\Source\Repos\Admission\MainDb.mdb"
+        db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\addmission\MainDb.mdb"
         db.Open()
         Dim selectCommand = "SELECT * FROM Courses"
         Dim cmd As OleDbCommand = New OleDbCommand(selectCommand, db)
