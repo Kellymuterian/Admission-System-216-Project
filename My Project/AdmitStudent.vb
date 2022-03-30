@@ -58,4 +58,12 @@ Public Class AdmitStudent
     Private Sub ComboBox1_SelectedValueChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedValueChanged
         maxCredits = credits.Item(ComboBox1.SelectedIndex)
     End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub StudentAdm_TextChanged(sender As Object, e As EventArgs) Handles StudentAdm.TextChanged
+
+    End Sub
 End Class

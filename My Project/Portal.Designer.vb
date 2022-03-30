@@ -271,7 +271,7 @@ Partial Class Portal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1200, 848)
+        Me.ClientSize = New System.Drawing.Size(1200, 749)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Portal"
         Me.Text = "Portal"
