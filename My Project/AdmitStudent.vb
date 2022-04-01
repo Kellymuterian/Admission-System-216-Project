@@ -11,8 +11,9 @@ Public Class AdmitStudent
             gender = "Female"
         End If
         db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\addmission\MainDb.mdb"
+        'db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\addmission\MainDb.mdb"
         db.Open()
-        Dim insertCommand As String = "INSERT into Students([FullNames],[AdmNo],[Course],[CourseId],[MaxCredit],[AdmDate],[ExpiryDate],[Gender]) VALUES('" & StudentNames.Text & "','" & StudentAdm.Text & "','" & ComboBox1.SelectedItem.ToString() & "','" & ComboBox1.SelectedIndex + 1 & "','" & maxCredits & "','" & AdmDate.Text & "','" & GradDate.Text & "','" & gender & "')"
+        Dim insertCommand As String = "INSERT into Students([FullNames],[AdmNo],[Course],[CourseId],[MaxCredit],[AdmDate],[ExpiryDate],[Gender],[Status]) VALUES('" & StudentNames.Text & "','" & StudentAdm.Text & "','" & ComboBox1.SelectedItem.ToString() & "','" & ComboBox1.SelectedIndex + 1 & "','" & maxCredits & "','" & AdmDate.Text & "','" & GradDate.Text & "','" & gender & "','" & "active" & "')"
         Dim cmd As OleDbCommand = New OleDbCommand(insertCommand, db)
         cmd.Parameters.Add(New OleDbParameter("FullNames", CType(StudentNames.Text, String)))
         cmd.Parameters.Add(New OleDbParameter("AdmNo", CType(StudentAdm.Text, String)))
@@ -22,6 +23,7 @@ Public Class AdmitStudent
         cmd.Parameters.Add(New OleDbParameter("AdmDate", CType(AdmDate.Text, String)))
         cmd.Parameters.Add(New OleDbParameter("ExpiryDate", CType(GradDate.Text, String)))
         cmd.Parameters.Add(New OleDbParameter("Gender", CType(gender, String)))
+        cmd.Parameters.Add(New OleDbParameter("Status", CType("active", String)))
         Try
             cmd.ExecuteNonQuery()
             cmd.Dispose()
@@ -57,13 +59,5 @@ Public Class AdmitStudent
 
     Private Sub ComboBox1_SelectedValueChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedValueChanged
         maxCredits = credits.Item(ComboBox1.SelectedIndex)
-    End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub StudentAdm_TextChanged(sender As Object, e As EventArgs) Handles StudentAdm.TextChanged
-
     End Sub
 End Class
