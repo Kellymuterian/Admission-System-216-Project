@@ -23,6 +23,7 @@ Partial Class AddCourses
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ExitAddCourses = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Duration = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -39,7 +40,6 @@ Partial Class AddCourses
         Me.Label3 = New System.Windows.Forms.Label()
         Me.CourseName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.ExitAddCourses = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -70,6 +70,15 @@ Partial Class AddCourses
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Add Courses"
+        '
+        'ExitAddCourses
+        '
+        Me.ExitAddCourses.Location = New System.Drawing.Point(478, 467)
+        Me.ExitAddCourses.Name = "ExitAddCourses"
+        Me.ExitAddCourses.Size = New System.Drawing.Size(173, 55)
+        Me.ExitAddCourses.TabIndex = 35
+        Me.ExitAddCourses.Text = "Exit"
+        Me.ExitAddCourses.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -210,15 +219,6 @@ Partial Class AddCourses
         Me.Label2.Size = New System.Drawing.Size(60, 21)
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "Name"
-        '
-        'ExitAddCourses
-        '
-        Me.ExitAddCourses.Location = New System.Drawing.Point(478, 467)
-        Me.ExitAddCourses.Name = "ExitAddCourses"
-        Me.ExitAddCourses.Size = New System.Drawing.Size(173, 55)
-        Me.ExitAddCourses.TabIndex = 35
-        Me.ExitAddCourses.Text = "Exit"
-        Me.ExitAddCourses.UseVisualStyleBackColor = True
         '
         'AddCourses
         '

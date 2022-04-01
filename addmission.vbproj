@@ -93,6 +93,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MainDbDataSet11.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MainDbDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainDbDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="My Project\AddCourses.Designer.vb">
       <DependentUpon>AddCourses.vb</DependentUpon>
     </Compile>
@@ -159,6 +164,9 @@
     <EmbeddedResource Include="My Project\AddCourses.resx">
       <DependentUpon>AddCourses.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="My Project\AddLecturer.resx">
+      <DependentUpon>AddLecturer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\AddUnits.resx">
       <DependentUpon>AddUnits.vb</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +222,17 @@
     </None>
     <None Include="MainDbDataSet11.xss">
       <DependentUpon>MainDbDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="MainDbDataSet2.xsc">
+      <DependentUpon>MainDbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MainDbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MainDbDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MainDbDataSet2.xss">
+      <DependentUpon>MainDbDataSet2.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
