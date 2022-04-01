@@ -24,15 +24,19 @@ Partial Class Units
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(49, 126)
+        Me.DataGridView1.GridColor = System.Drawing.Color.Black
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(644, 150)
         Me.DataGridView1.TabIndex = 0
@@ -46,33 +50,35 @@ Partial Class Units
         Me.Button1.Text = "SUBMIT"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
+        'DataGridView2
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(257, 522)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(153, 54)
-        Me.Button2.TabIndex = 36
-        Me.Button2.Text = "EXIT"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(12, 256)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(690, 150)
+        Me.DataGridView2.TabIndex = 2
         '
         'Units
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1111, 644)
-        Me.Controls.Add(Me.Button2)
+        Me.ClientSize = New System.Drawing.Size(992, 672)
+        Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Units"
         Me.Text = "Units"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button1 As Button
+<<<<<<< HEAD
+    Friend WithEvents DataGridView2 As DataGridView
+=======
     Friend WithEvents Button2 As Button
+>>>>>>> fad4d439facbf90caf36664711d8a15ed57b9f57
 End Class

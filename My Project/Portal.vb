@@ -29,8 +29,12 @@ Public Class Portal
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+<<<<<<< HEAD
+
+=======
         Units.Tag = admissionNumber
         Units.Show()
         Me.Hide()
+>>>>>>> fad4d439facbf90caf36664711d8a15ed57b9f57
     End Sub
 End Class

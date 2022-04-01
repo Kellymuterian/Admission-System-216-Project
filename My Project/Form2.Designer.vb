@@ -27,9 +27,9 @@ Partial Class Form2
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.AddCourse = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.LogOut = New System.Windows.Forms.Button()
         Me.AddUnitsAdmin = New System.Windows.Forms.Button()
         Me.AdmtStdnt = New System.Windows.Forms.Button()
-        Me.LogOut = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -37,7 +37,7 @@ Partial Class Form2
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(283, 39)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(295, 31)
@@ -59,6 +59,7 @@ Partial Class Form2
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.GroupBox1.Controls.Add(Me.LogOut)
         Me.GroupBox1.Controls.Add(Me.AddUnitsAdmin)
         Me.GroupBox1.Controls.Add(Me.AdmtStdnt)
@@ -71,6 +72,17 @@ Partial Class Form2
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Admin Page"
+        '
+        'LogOut
+        '
+        Me.LogOut.BackColor = System.Drawing.Color.LightCoral
+        Me.LogOut.ForeColor = System.Drawing.Color.White
+        Me.LogOut.Location = New System.Drawing.Point(354, 419)
+        Me.LogOut.Name = "LogOut"
+        Me.LogOut.Size = New System.Drawing.Size(183, 57)
+        Me.LogOut.TabIndex = 23
+        Me.LogOut.Text = "Log Out"
+        Me.LogOut.UseVisualStyleBackColor = False
         '
         'AddUnitsAdmin
         '
@@ -89,17 +101,6 @@ Partial Class Form2
         Me.AdmtStdnt.TabIndex = 5
         Me.AdmtStdnt.Text = "Admit Student"
         Me.AdmtStdnt.UseVisualStyleBackColor = True
-        '
-        'LogOut
-        '
-        Me.LogOut.BackColor = System.Drawing.Color.LightCoral
-        Me.LogOut.ForeColor = System.Drawing.Color.White
-        Me.LogOut.Location = New System.Drawing.Point(354, 419)
-        Me.LogOut.Name = "LogOut"
-        Me.LogOut.Size = New System.Drawing.Size(183, 57)
-        Me.LogOut.TabIndex = 23
-        Me.LogOut.Text = "Log Out"
-        Me.LogOut.UseVisualStyleBackColor = False
         '
         'Form2
         '

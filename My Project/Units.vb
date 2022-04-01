@@ -17,9 +17,32 @@ Public Class Units
         checkboxcol.Width = 40
         checkboxcol.Name = "checkboxcol"
         DataGridView1.Columns.Insert(0, checkboxcol)
+<<<<<<< HEAD
+
+    End Sub
+
+    Private Sub PLoad_data()
+        conn.Open()
+        Dim cmd As New OleDbCommand("select ID,Name,Description,Lecturer,CreditHours from Selected", conn)
+        Dim dtb As New OleDbDataAdapter
+        dtb.SelectCommand = cmd
+        Dim Selected As New DataTable
+        Selected.Clear()
+        dtb.Fill(Selected)
+        DataGridView2.DataSource = Selected
+        conn.Close()
+
+    End Sub
+
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+=======
+>>>>>>> fad4d439facbf90caf36664711d8a15ed57b9f57
     End Sub
     Private Sub Units_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Load_data()
+        PLoad_data()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -44,4 +67,6 @@ Public Class Units
         Portal.Show()
         Me.Close()
     End Sub
+
+
 End Class
