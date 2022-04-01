@@ -21,6 +21,18 @@ Public Class Units
 
     End Sub
 
+    Private Sub PLoad_data()
+        conn.Open()
+        Dim cmd As New OleDbCommand("select ID,Name,Description,Lecturer,CreditHours from Selected", conn)
+        Dim dtb As New OleDbDataAdapter
+        dtb.SelectCommand = cmd
+        Dim Selected As New DataTable
+        Selected.Clear()
+        dtb.Fill(Selected)
+        DataGridView2.DataSource = Selected
+        conn.Close()
+
+    End Sub
 
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
@@ -29,6 +41,7 @@ Public Class Units
 
     Private Sub Units_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Load_data()
+        PLoad_data()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
