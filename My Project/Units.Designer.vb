@@ -28,6 +28,7 @@ Partial Class Units
         Me.ExitAddUnits = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MaxCreditsText = New System.Windows.Forms.Label()
+        Me.CheckBoxCol = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -38,6 +39,7 @@ Partial Class Units
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CheckBoxCol})
         Me.DataGridView1.GridColor = System.Drawing.Color.Black
         Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView1.Name = "DataGridView1"
@@ -92,6 +94,12 @@ Partial Class Units
         Me.MaxCreditsText.TabIndex = 38
         Me.MaxCreditsText.Text = "NaN"
         '
+        'CheckBoxCol
+        '
+        Me.CheckBoxCol.HeaderText = "Selected"
+        Me.CheckBoxCol.Name = "CheckBoxCol"
+        Me.CheckBoxCol.Width = 55
+        '
         'Units
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -118,4 +126,5 @@ Partial Class Units
     Friend WithEvents ExitAddUnits As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents MaxCreditsText As Label
+    Friend WithEvents CheckBoxCol As DataGridViewCheckBoxColumn
 End Class

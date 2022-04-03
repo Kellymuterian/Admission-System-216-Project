@@ -7,7 +7,7 @@ Public Class Form1
             Me.Hide()
             UserName.Clear()
             Password.Clear()
-        ElseIf (Password.Text = "student") Then
+        ElseIf (Password.Text = "st") Then
             'db.ConnectionString = String.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\Source\Repos\Admission\MainDb.mdb")
             db.ConnectionString = String.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb")
             db.Open()
@@ -35,5 +35,9 @@ Public Class Form1
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs)
         Application.Exit()
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
     End Sub
 End Class

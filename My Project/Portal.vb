@@ -6,7 +6,6 @@ Public Class Portal
     Private Sub LogOut_Click(sender As Object, e As EventArgs) Handles LogOut.Click
         Me.Close()
         Form1.Show()
-        'Me.Hide()
     End Sub
 
     Private Sub Portal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -32,13 +31,8 @@ Public Class Portal
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        Units.Tag.Adm = admissionNumber
-        Units.Tag.MaxVd = maxCDr.ToString()
+        Units.Tag = admissionNumber + " " + maxCDr.ToString()
         Units.Show()
         Me.Hide()
-    End Sub
-
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
     End Sub
 End Class
