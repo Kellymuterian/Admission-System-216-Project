@@ -17,7 +17,7 @@ Public Class Units
         checkboxcol.Width = 40
         checkboxcol.Name = "checkboxcol"
         DataGridView1.Columns.Insert(0, checkboxcol)
-<<<<<<< HEAD
+
 
     End Sub
 
@@ -37,8 +37,7 @@ Public Class Units
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
-=======
->>>>>>> fad4d439facbf90caf36664711d8a15ed57b9f57
+
     End Sub
     Private Sub Units_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Load_data()
@@ -66,5 +65,9 @@ Public Class Units
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Portal.Show()
         Me.Close()
+    End Sub
+
+    Private Sub DataGridView2_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
+
     End Sub
 End Class
