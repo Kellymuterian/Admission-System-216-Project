@@ -80,7 +80,7 @@ Public Class Units
             If unitsRegistered.Contains(DataGridView1.Rows(e.RowIndex).Cells(2).ToString()) Then
                 MaxCreditsText.Text = maxCredits.ToString() + "/" + unitsRegistered.Item(0) + Me.Tag.ToString().Substring(8) + " Hours"
 
-                MessageBox.Show("You've already selected this unit " + DataGridView1.Rows(e.RowIndex).Cells(0).Value.ToString())
+                MessageBox.Show("You've already selected this unit ")
             Else
                 maxCredits = maxCredits + Integer.Parse(DataGridView1.Rows(e.RowIndex).Cells(5).Value)
                 MaxCreditsText.Text = maxCredits.ToString() + "/" + Me.Tag.ToString().Substring(8) + " Hours"

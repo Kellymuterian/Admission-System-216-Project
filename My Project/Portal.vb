@@ -1,17 +1,30 @@
 ﻿Imports System.Data.OleDb
 Public Class Portal
     Dim db As OleDbConnection = New OleDbConnection()
+    Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb")
     Dim admissionNumber As String
     Dim maxCDr As Integer
     Private Sub LogOut_Click(sender As Object, e As EventArgs) Handles LogOut.Click
         Me.Close()
         Form1.Show()
     End Sub
+    Private Sub PLoad_data()
+        conn.Open()
+        Dim cmd As New OleDbCommand("select ID,Name,Description,Lecturer,CreditHours from Selected WHERE AdmNo = @admissionNumber", conn)
+        cmd.Parameters.AddWithValue("@admissionNumber", Me.Tag.ToString().Substring(0, 7))
+        Dim dtb As New OleDbDataAdapter
+        dtb.SelectCommand = cmd
+        Dim Selected As New DataTable
+        Selected.Clear()
+        dtb.Fill(Selected)
+        DataGridView2.DataSource = Selected
+    End Sub
 
     Private Sub Portal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'db.ConnectionString = String.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\Source\Repos\Admission\MainDb.mdb")
         db.ConnectionString = String.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb")
         db.Open()
+        PLoad_data()
         Dim cmd As OleDbCommand = New OleDbCommand(String.Concat("SELECT * FROM Students WHERE AdmNo = @admissionNumber"), db)
         cmd.Parameters.AddWithValue("@admissionNumber", Me.Tag.ToString())
         Dim student As OleDbDataReader = cmd.ExecuteReader()
@@ -30,7 +43,6 @@ Public Class Portal
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
         Units.Tag = admissionNumber + " " + maxCDr.ToString()
         Units.Show()
         Me.Hide()
