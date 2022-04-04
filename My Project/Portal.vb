@@ -2,15 +2,15 @@
 Public Class Portal
     Dim db As OleDbConnection = New OleDbConnection()
     Dim admissionNumber As String
+    Dim maxCDr As Integer
     Private Sub LogOut_Click(sender As Object, e As EventArgs) Handles LogOut.Click
         Me.Close()
         Form1.Show()
-        'Me.Hide()
     End Sub
 
     Private Sub Portal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'db.ConnectionString = String.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\Source\Repos\Admission\MainDb.mdb")
-        db.ConnectionString = String.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\addmission\MainDb.mdb")
+        db.ConnectionString = String.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb")
         db.Open()
         Dim cmd As OleDbCommand = New OleDbCommand(String.Concat("SELECT * FROM Students WHERE AdmNo = @admissionNumber"), db)
         cmd.Parameters.AddWithValue("@admissionNumber", Me.Tag.ToString())
@@ -24,17 +24,15 @@ Public Class Portal
             Course.Text = student(3)
             Status.Text = student(9)
             MaxCredits.Text = student(5).ToString() + " Credit Hours"
+            maxCDr = student(5)
             GradDate.Text = student(7)
         End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-<<<<<<< HEAD
 
-=======
-        Units.Tag = admissionNumber
+        Units.Tag = admissionNumber + " " + maxCDr.ToString()
         Units.Show()
         Me.Hide()
->>>>>>> fad4d439facbf90caf36664711d8a15ed57b9f57
     End Sub
 End Class

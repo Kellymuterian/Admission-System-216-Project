@@ -25,6 +25,10 @@ Partial Class Units
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.ExitAddUnits = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.MaxCreditsText = New System.Windows.Forms.Label()
+        Me.CheckBoxCol = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -35,6 +39,7 @@ Partial Class Units
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CheckBoxCol})
         Me.DataGridView1.GridColor = System.Drawing.Color.Black
         Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView1.Name = "DataGridView1"
@@ -43,7 +48,7 @@ Partial Class Units
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(47, 455)
+        Me.Button1.Location = New System.Drawing.Point(49, 522)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(149, 54)
         Me.Button1.TabIndex = 1
@@ -53,17 +58,57 @@ Partial Class Units
         'DataGridView2
         '
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(12, 168)
+        Me.DataGridView2.Location = New System.Drawing.Point(12, 169)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(644, 150)
+        Me.DataGridView2.Size = New System.Drawing.Size(690, 150)
         Me.DataGridView2.TabIndex = 2
+        '
+        'ExitAddUnits
+        '
+        Me.ExitAddUnits.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ExitAddUnits.ForeColor = System.Drawing.Color.Black
+        Me.ExitAddUnits.Location = New System.Drawing.Point(257, 522)
+        Me.ExitAddUnits.Name = "ExitAddUnits"
+        Me.ExitAddUnits.Size = New System.Drawing.Size(153, 54)
+        Me.ExitAddUnits.TabIndex = 36
+        Me.ExitAddUnits.Text = "EXIT"
+        Me.ExitAddUnits.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(12, 374)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(158, 21)
+        Me.Label1.TabIndex = 37
+        Me.Label1.Text = "Max Credit Hours :"
+        '
+        'MaxCreditsText
+        '
+        Me.MaxCreditsText.AutoSize = True
+        Me.MaxCreditsText.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaxCreditsText.Location = New System.Drawing.Point(176, 374)
+        Me.MaxCreditsText.Name = "MaxCreditsText"
+        Me.MaxCreditsText.Size = New System.Drawing.Size(49, 21)
+        Me.MaxCreditsText.TabIndex = 38
+        Me.MaxCreditsText.Text = "NaN"
+        '
+        'CheckBoxCol
+        '
+        Me.CheckBoxCol.HeaderText = "Selected"
+        Me.CheckBoxCol.Name = "CheckBoxCol"
+        Me.CheckBoxCol.Width = 55
         '
         'Units
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(905, 605)
+        Me.ClientSize = New System.Drawing.Size(1111, 644)
+        Me.Controls.Add(Me.MaxCreditsText)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.ExitAddUnits)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Units"
@@ -71,14 +116,15 @@ Partial Class Units
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button1 As Button
-<<<<<<< HEAD
     Friend WithEvents DataGridView2 As DataGridView
-=======
-    Friend WithEvents Button2 As Button
->>>>>>> fad4d439facbf90caf36664711d8a15ed57b9f57
+    Friend WithEvents ExitAddUnits As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents MaxCreditsText As Label
+    Friend WithEvents CheckBoxCol As DataGridViewCheckBoxColumn
 End Class

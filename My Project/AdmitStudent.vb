@@ -10,7 +10,7 @@ Public Class AdmitStudent
         ElseIf Female.Checked Then
             gender = "Female"
         End If
-        db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\addmission\MainDb.mdb"
+        db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb"
         'db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\addmission\MainDb.mdb"
         db.Open()
         Dim insertCommand As String = "INSERT into Students([FullNames],[AdmNo],[Course],[CourseId],[MaxCredit],[AdmDate],[ExpiryDate],[Gender],[Status]) VALUES('" & StudentNames.Text & "','" & StudentAdm.Text & "','" & ComboBox1.SelectedItem.ToString() & "','" & ComboBox1.SelectedIndex + 1 & "','" & maxCredits & "','" & AdmDate.Text & "','" & GradDate.Text & "','" & gender & "','" & "active" & "')"
@@ -44,7 +44,7 @@ Public Class AdmitStudent
 
     Private Sub AdmitStudent_Load(sender As Object, e As EventArgs) Handles Me.Load
         'db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\Source\Repos\Admission\MainDb.mdb"
-        db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\addmission\MainDb.mdb"
+        db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb"
         db.Open()
         Dim selectCommand = "SELECT * FROM Courses"
         Dim cmd As OleDbCommand = New OleDbCommand(selectCommand, db)
@@ -59,5 +59,9 @@ Public Class AdmitStudent
 
     Private Sub ComboBox1_SelectedValueChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedValueChanged
         maxCredits = credits.Item(ComboBox1.SelectedIndex)
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
     End Sub
 End Class

@@ -19,4 +19,8 @@ Public Class Form2
         Form1.Show()
         Me.Hide()
     End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
 End Class
