@@ -23,12 +23,12 @@ Partial Class Units
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.CheckBoxCol = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.ExitAddUnits = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MaxCreditsText = New System.Windows.Forms.Label()
-        Me.CheckBoxCol = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -43,8 +43,14 @@ Partial Class Units
         Me.DataGridView1.GridColor = System.Drawing.Color.Black
         Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(644, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(587, 150)
         Me.DataGridView1.TabIndex = 0
+        '
+        'CheckBoxCol
+        '
+        Me.CheckBoxCol.HeaderText = "Selected"
+        Me.CheckBoxCol.Name = "CheckBoxCol"
+        Me.CheckBoxCol.Width = 55
         '
         'Button1
         '
@@ -60,7 +66,7 @@ Partial Class Units
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(12, 169)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(690, 150)
+        Me.DataGridView2.Size = New System.Drawing.Size(587, 150)
         Me.DataGridView2.TabIndex = 2
         '
         'ExitAddUnits
@@ -93,12 +99,6 @@ Partial Class Units
         Me.MaxCreditsText.Size = New System.Drawing.Size(49, 21)
         Me.MaxCreditsText.TabIndex = 38
         Me.MaxCreditsText.Text = "NaN"
-        '
-        'CheckBoxCol
-        '
-        Me.CheckBoxCol.HeaderText = "Selected"
-        Me.CheckBoxCol.Name = "CheckBoxCol"
-        Me.CheckBoxCol.Width = 55
         '
         'Units
         '
