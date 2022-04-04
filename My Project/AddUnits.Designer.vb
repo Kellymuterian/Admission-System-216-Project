@@ -38,6 +38,7 @@ Partial Class AddUnits
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.GroupBox1.Controls.Add(Me.ExitAddUnits)
         Me.GroupBox1.Controls.Add(Me.AddUnit)
         Me.GroupBox1.Controls.Add(Me.Credits)
