@@ -46,6 +46,7 @@ Partial Class AdmitStudent
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.ExitAdmitStudents)
         Me.GroupBox1.Controls.Add(Me.Label7)
@@ -99,7 +100,7 @@ Partial Class AdmitStudent
         '
         'AdmitStd
         '
-        Me.AdmitStd.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.AdmitStd.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.AdmitStd.ForeColor = System.Drawing.Color.White
         Me.AdmitStd.Location = New System.Drawing.Point(154, 398)
         Me.AdmitStd.Name = "AdmitStd"

@@ -22,6 +22,7 @@ Partial Class Units
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Units))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.CheckBoxCol = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -38,6 +39,7 @@ Partial Class Units
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CheckBoxCol})
         Me.DataGridView1.GridColor = System.Drawing.Color.Black
@@ -54,17 +56,20 @@ Partial Class Units
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ActiveCaption
         Me.Button1.Location = New System.Drawing.Point(49, 522)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(149, 54)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "SUBMIT"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'DataGridView2
         '
+        Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.HighlightText
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(12, 169)
+        Me.DataGridView2.Location = New System.Drawing.Point(16, 188)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(587, 150)
         Me.DataGridView2.TabIndex = 2
@@ -104,6 +109,7 @@ Partial Class Units
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1111, 644)
         Me.Controls.Add(Me.MaxCreditsText)
         Me.Controls.Add(Me.Label1)
