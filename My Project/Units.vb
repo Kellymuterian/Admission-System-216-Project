@@ -16,9 +16,10 @@ Public Class Units
         DataGridView1.DataSource = Selected
         conn.Close()
         Dim checkboxcol As New DataGridViewCheckBoxColumn
-        'checkboxcol.Width = 40
-        'checkboxcol.Name = "checkboxcol"
-        'DataGridView1.Columns.Insert(0, checkboxcol)
+        checkboxcol.Width = 40
+        checkboxcol.Name = "checkboxcol"
+        checkboxcol.HeaderText = "Selected"
+        DataGridView1.Columns.Insert(0, checkboxcol)
     End Sub
 
     Private Sub PLoad_data()
@@ -32,6 +33,11 @@ Public Class Units
         dtb.Fill(Selected)
         DataGridView2.DataSource = Selected
         conn.Close()
+        Dim checkboxcol As New DataGridViewCheckBoxColumn
+        checkboxcol.Width = 40
+        checkboxcol.Name = "checkboxfordrop"
+        checkboxcol.HeaderText = "Drop"
+        DataGridView2.Columns.Insert(0, checkboxcol)
         For Each item As DataGridViewRow In DataGridView2.Rows
             maxCredits = maxCredits + 3
             unitsRegistered.Add(item.Cells(2).ToString())
@@ -63,8 +69,10 @@ Public Class Units
                     conn.Close()
                 End If
             Next
+            maxCredits = 0
+            DataGridView2.Columns.RemoveAt(0)
             PLoad_data()
-            MessageBox.Show("YOU HAVE SUBMITTED UNITS")
+            MessageBox.Show("You have regirster for units")
         End If
     End Sub
     Private Sub ExitAddUnits_Click(sender As Object, e As EventArgs) Handles ExitAddUnits.Click
@@ -75,21 +83,30 @@ Public Class Units
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         'If Convert.ToBoolean(DataGridView1.Rows(e.RowIndex).Cells(0).Value) Then
         If maxCredits > Integer.Parse(Me.Tag.ToString().Substring(8)) Or maxCredits + Integer.Parse(DataGridView1.Rows(e.RowIndex).Cells(5).Value) > Integer.Parse(Me.Tag.ToString().Substring(8)) Then
-                MessageBox.Show("You've exceeded you maximum creadit hours  ")
-            Else
-            If unitsRegistered.Contains(DataGridView1.Rows(e.RowIndex).Cells(2).ToString()) Then
-                MaxCreditsText.Text = maxCredits.ToString() + "/" + unitsRegistered.Item(0) + Me.Tag.ToString().Substring(8) + " Hours"
+            MessageBox.Show("You've exceeded you maximum creadit hours  ")
+        Else
+            maxCredits = maxCredits + Integer.Parse(DataGridView1.Rows(e.RowIndex).Cells(5).Value)
+            MaxCreditsText.Text = maxCredits.ToString() + "/" + Me.Tag.ToString().Substring(8) + " Hours"
+        End If
+    End Sub
 
-                MessageBox.Show("You've already selected this unit ")
-            Else
-                maxCredits = maxCredits + Integer.Parse(DataGridView1.Rows(e.RowIndex).Cells(5).Value)
-                MaxCreditsText.Text = maxCredits.ToString() + "/" + Me.Tag.ToString().Substring(8) + " Hours"
-            End If
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        For Each row As DataGridViewRow In DataGridView2.Rows
+            Dim select1 As Boolean = Convert.ToBoolean(row.Cells("checkboxfordrop").Value)
+            If select1 Then
+                conn.Open()
+                Dim sql As String = "delete * from Selected where ID= @id"
+                Dim cmd As New OleDbCommand(sql, conn)
+                cmd.Parameters.AddWithValue("@id", row.Cells("ID").Value)
+                cmd.ExecuteNonQuery()
+                conn.Close()
 
             End If
-        'Else
-        'MessageBox.Show("You've already " + Convert.ToBoolean(DataGridView1.Rows(e.RowIndex).Cells(0).Value).ToString())
-        'End If
+        Next
+        DataGridView2.Columns.RemoveAt(0)
+        maxCredits = 0
+        PLoad_data()
+        MessageBox.Show("You've dropped the units")
 
     End Sub
 End Class
