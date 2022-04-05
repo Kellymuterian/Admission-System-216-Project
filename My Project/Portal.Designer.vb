@@ -82,6 +82,14 @@ Partial Class Portal
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Student Portal"
         '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.Location = New System.Drawing.Point(7, 474)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(568, 150)
+        Me.DataGridView2.TabIndex = 3
+        '
         'MaxCredits
         '
         Me.MaxCredits.AutoSize = True
@@ -120,8 +128,9 @@ Partial Class Portal
         Me.Button1.Location = New System.Drawing.Point(1015, 106)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(150, 52)
-        Me.Button1.TabIndex = 35
+        Me.Button1.TabIndex = 2
         Me.Button1.Text = "Enroll Units"
+        Me.Button1.UseCompatibleTextRendering = True
         Me.Button1.UseVisualStyleBackColor = False
         '
         'GradDate
@@ -252,7 +261,7 @@ Partial Class Portal
         Me.LogOut.Location = New System.Drawing.Point(1015, 27)
         Me.LogOut.Name = "LogOut"
         Me.LogOut.Size = New System.Drawing.Size(150, 52)
-        Me.LogOut.TabIndex = 22
+        Me.LogOut.TabIndex = 1
         Me.LogOut.Text = "Log Out"
         Me.LogOut.UseVisualStyleBackColor = False
         '

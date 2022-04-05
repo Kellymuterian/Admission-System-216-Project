@@ -22,7 +22,6 @@ Partial Class Units
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Units))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
@@ -30,6 +29,7 @@ Partial Class Units
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MaxCreditsText = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -42,27 +42,28 @@ Partial Class Units
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.GridColor = System.Drawing.Color.Black
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 12)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(517, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(576, 150)
         Me.DataGridView1.TabIndex = 0
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.SeaGreen
+        Me.Button1.BackColor = System.Drawing.Color.RoyalBlue
         Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(12, 224)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(149, 54)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "SUBMIT"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Text = "Add Units"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'DataGridView2
         '
+        Me.DataGridView2.AllowUserToAddRows = False
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(12, 169)
+        Me.DataGridView2.Location = New System.Drawing.Point(16, 303)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(576, 201)
         Me.DataGridView2.TabIndex = 2
@@ -72,9 +73,9 @@ Partial Class Units
         Me.ExitAddUnits.BackColor = System.Drawing.Color.Salmon
         Me.ExitAddUnits.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ExitAddUnits.ForeColor = System.Drawing.Color.Black
-        Me.ExitAddUnits.Location = New System.Drawing.Point(693, 12)
+        Me.ExitAddUnits.Location = New System.Drawing.Point(16, 628)
         Me.ExitAddUnits.Name = "ExitAddUnits"
-        Me.ExitAddUnits.Size = New System.Drawing.Size(153, 54)
+        Me.ExitAddUnits.Size = New System.Drawing.Size(149, 54)
         Me.ExitAddUnits.TabIndex = 36
         Me.ExitAddUnits.Text = "Exit"
         Me.ExitAddUnits.UseVisualStyleBackColor = False
@@ -111,11 +112,24 @@ Partial Class Units
         Me.Button2.Text = "Drop Units"
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Button3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(16, 546)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(149, 54)
+        Me.Button3.TabIndex = 39
+        Me.Button3.Text = "Drop Units"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'Units
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1111, 644)
+        Me.ClientSize = New System.Drawing.Size(1255, 754)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.MaxCreditsText)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView2)
@@ -138,4 +152,5 @@ Partial Class Units
     Friend WithEvents Label1 As Label
     Friend WithEvents MaxCreditsText As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

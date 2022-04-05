@@ -1,8 +1,8 @@
 ﻿Imports System.Data.OleDb
 
 Public Class Units
-    Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\source\repos\VB Database\MainDb.mdb")
-    ' Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb")
+    'Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\source\repos\VB Database\MainDb.mdb")
+    Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb")
     Dim maxCredits As Integer = 0
     Dim unitsRegistered As List(Of String) = New List(Of String)
     Private Sub Load_data()
@@ -90,7 +90,7 @@ Public Class Units
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         For Each row As DataGridViewRow In DataGridView2.Rows
             Dim select1 As Boolean = Convert.ToBoolean(row.Cells("checkboxfordrop").Value)
             If select1 Then
