@@ -11,7 +11,7 @@ Public Class Portal
     End Sub
     Private Sub PLoad_data()
         conn.Open()
-        Dim cmd As New OleDbCommand("select ID,Name,Description,Lecturer,CreditHours from Selected WHERE AdmNo = @admissionNumber", conn)
+        Dim cmd As New OleDbCommand("select Name,Description,Lecturer,CreditHours from Selected WHERE AdmNo = @admissionNumber", conn)
         cmd.Parameters.AddWithValue("@admissionNumber", Me.Tag.ToString().Substring(0, 7))
         Dim dtb As New OleDbDataAdapter
         dtb.SelectCommand = cmd
@@ -47,9 +47,5 @@ Public Class Portal
         Units.Tag = admissionNumber + " " + maxCDr.ToString()
         Units.Show()
         Me.Hide()
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-
     End Sub
 End Class

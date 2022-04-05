@@ -28,6 +28,8 @@ Partial Class Form2
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.AddCourse = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.AddLec = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.LogOut = New System.Windows.Forms.Button()
         Me.AddUnitsAdmin = New System.Windows.Forms.Button()
         Me.AdmtStdnt = New System.Windows.Forms.Button()
@@ -40,7 +42,7 @@ Partial Class Form2
         Me.Label1.BackColor = System.Drawing.Color.AliceBlue
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(283, 39)
+        Me.Label1.Location = New System.Drawing.Point(418, 44)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(295, 31)
         Me.Label1.TabIndex = 0
@@ -53,7 +55,7 @@ Partial Class Form2
         'AddCourse
         '
         Me.AddCourse.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.AddCourse.Location = New System.Drawing.Point(354, 126)
+        Me.AddCourse.Location = New System.Drawing.Point(172, 136)
         Me.AddCourse.Name = "AddCourse"
         Me.AddCourse.Size = New System.Drawing.Size(183, 55)
         Me.AddCourse.TabIndex = 1
@@ -65,6 +67,8 @@ Partial Class Form2
         Me.GroupBox1.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.GroupBox1.BackgroundImage = CType(resources.GetObject("GroupBox1.BackgroundImage"), System.Drawing.Image)
         Me.GroupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.GroupBox1.Controls.Add(Me.AddLec)
+        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.LogOut)
         Me.GroupBox1.Controls.Add(Me.AddUnitsAdmin)
         Me.GroupBox1.Controls.Add(Me.AdmtStdnt)
@@ -74,16 +78,36 @@ Partial Class Form2
         Me.GroupBox1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(1, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1008, 665)
+        Me.GroupBox1.Size = New System.Drawing.Size(1148, 822)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Admin Page"
+        '
+        'AddLec
+        '
+        Me.AddLec.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.AddLec.Location = New System.Drawing.Point(172, 250)
+        Me.AddLec.Name = "AddLec"
+        Me.AddLec.Size = New System.Drawing.Size(183, 55)
+        Me.AddLec.TabIndex = 25
+        Me.AddLec.Text = "Add Lecturer"
+        Me.AddLec.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button1.Location = New System.Drawing.Point(395, 250)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(183, 55)
+        Me.Button1.TabIndex = 24
+        Me.Button1.Text = "Class List"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'LogOut
         '
         Me.LogOut.BackColor = System.Drawing.Color.LightCoral
         Me.LogOut.ForeColor = System.Drawing.Color.White
-        Me.LogOut.Location = New System.Drawing.Point(354, 419)
+        Me.LogOut.Location = New System.Drawing.Point(819, 136)
         Me.LogOut.Name = "LogOut"
         Me.LogOut.Size = New System.Drawing.Size(183, 57)
         Me.LogOut.TabIndex = 23
@@ -93,7 +117,7 @@ Partial Class Form2
         'AddUnitsAdmin
         '
         Me.AddUnitsAdmin.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.AddUnitsAdmin.Location = New System.Drawing.Point(354, 220)
+        Me.AddUnitsAdmin.Location = New System.Drawing.Point(395, 136)
         Me.AddUnitsAdmin.Name = "AddUnitsAdmin"
         Me.AddUnitsAdmin.Size = New System.Drawing.Size(183, 55)
         Me.AddUnitsAdmin.TabIndex = 6
@@ -103,7 +127,7 @@ Partial Class Form2
         'AdmtStdnt
         '
         Me.AdmtStdnt.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.AdmtStdnt.Location = New System.Drawing.Point(354, 313)
+        Me.AdmtStdnt.Location = New System.Drawing.Point(618, 136)
         Me.AdmtStdnt.Name = "AdmtStdnt"
         Me.AdmtStdnt.Size = New System.Drawing.Size(183, 55)
         Me.AdmtStdnt.TabIndex = 5
@@ -114,7 +138,7 @@ Partial Class Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1021, 672)
+        Me.ClientSize = New System.Drawing.Size(1134, 820)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form2"
         Me.Text = "Form2"
@@ -133,4 +157,6 @@ Partial Class Form2
     Friend WithEvents AdmtStdnt As Button
     Friend WithEvents AddUnitsAdmin As Button
     Friend WithEvents LogOut As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents AddLec As Button
 End Class

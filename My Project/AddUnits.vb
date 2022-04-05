@@ -1,23 +1,21 @@
 ﻿Imports System.Data.OleDb
 Public Class AddUnits
-    Dim db As OleDbConnection = New OleDbConnection
+    'Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\source\repos\VB Database\MainDb.mdb")
+    Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb")
     Private Sub AddUnit_Click(sender As Object, e As EventArgs) Handles AddUnit.Click
-        ' db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\db\MainDb.mdb"
-        db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\source\repos\VB Database\MainDb.mdb"
-        db.Open()
-        Dim insertCommand As String = "INSERT into Units([Name],[Description],[Lecturer],[CreditHours]) VALUES('" & UnitName.Text & "','" & Description.Text & "','" & Lec.Text & "','" & Credits.Text & "')"
-        Dim cmd As OleDbCommand = New OleDbCommand(insertCommand, db)
+        conn.Open()
+        Dim insertCommand As String = "INSERT into Units([Name],[Description],[Lecturer],[CreditHours]) VALUES('" & UnitName.Text & "','" & Description.Text & "','" & Lectureres.SelectedItem.ToString() & "','" & Credits.Text & "')"
+        Dim cmd As OleDbCommand = New OleDbCommand(insertCommand, conn)
         cmd.Parameters.Add(New OleDbParameter("Name", CType(UnitName.Text, String)))
         cmd.Parameters.Add(New OleDbParameter("Description", CType(Description.Text, String)))
-        cmd.Parameters.Add(New OleDbParameter("Lecturer", CType(Lec.Text, String)))
+        cmd.Parameters.Add(New OleDbParameter("Lecturer", CType(Lectureres.SelectedItem.ToString(), String)))
         cmd.Parameters.Add(New OleDbParameter("CreditHours", CType(Credits.Text, Integer)))
         Try
             cmd.ExecuteNonQuery()
             cmd.Dispose()
-            db.Close()
+            conn.Close()
             UnitName.Clear()
             Description.Clear()
-            Lec.Clear()
             Credits.Clear()
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -28,12 +26,17 @@ Public Class AddUnits
         Form2.Show()
         Me.Hide()
     End Sub
-
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
-
+    Private Sub PLoad_data()
+        conn.Open()
+        Dim selectCommand = "SELECT * FROM Lecturers"
+        Dim cmd As OleDbCommand = New OleDbCommand(selectCommand, conn)
+        Dim reader As OleDbDataReader = cmd.ExecuteReader()
+        While reader.Read
+            Lectureres.Items.Add(reader(1))
+        End While
+        conn.Close()
     End Sub
-
-    Private Sub UnitName_TextChanged(sender As Object, e As EventArgs) Handles UnitName.TextChanged
-
+    Private Sub AddUnits_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        PLoad_data()
     End Sub
 End Class

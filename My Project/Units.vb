@@ -4,10 +4,10 @@ Public Class Units
     'Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\source\repos\VB Database\MainDb.mdb")
     Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb")
     Dim maxCredits As Integer = 0
-    Dim unitsRegistered As List(Of String) = New List(Of String)
     Private Sub Load_data()
         conn.Open()
-        Dim cmd As New OleDbCommand("select ID, Name, Description, Lecturer, CreditHours from Units", conn)
+        Dim cmd As New OleDbCommand("select Name, Description, Lecturer, CreditHours from Units WHERE NAME NOT IN (SELECT NAME FROM Selected WHERE AdmNo = @AdmNo)", conn)
+        cmd.Parameters.AddWithValue("@AdmNo", Me.Tag.ToString().Substring(0, 7))
         Dim dt As New OleDbDataAdapter
         dt.SelectCommand = cmd
         Dim Selected As New DataTable
@@ -24,7 +24,7 @@ Public Class Units
 
     Private Sub PLoad_data()
         conn.Open()
-        Dim cmd As New OleDbCommand("select ID,Name,Description,Lecturer,CreditHours from Selected WHERE AdmNo = @admissionNumber", conn)
+        Dim cmd As New OleDbCommand("select ID,Name, Description, Lecturer, CreditHours from Selected WHERE AdmNo = @admissionNumber", conn)
         cmd.Parameters.AddWithValue("@admissionNumber", Me.Tag.ToString().Substring(0, 7))
         Dim dtb As New OleDbDataAdapter
         dtb.SelectCommand = cmd
@@ -40,8 +40,6 @@ Public Class Units
         DataGridView2.Columns.Insert(0, checkboxcol)
         For Each item As DataGridViewRow In DataGridView2.Rows
             maxCredits = maxCredits + 3
-            unitsRegistered.Add(item.Cells(2).ToString())
-            Console.WriteLine(unitsRegistered.Item(0).ToString())
         Next
         MaxCreditsText.Text = maxCredits.ToString() + "/" + Me.Tag.ToString().Substring(8) + " Hours"
     End Sub
@@ -71,21 +69,22 @@ Public Class Units
             Next
             maxCredits = 0
             DataGridView2.Columns.RemoveAt(0)
+            Me.Refresh()
             PLoad_data()
             MessageBox.Show("You have regirster for units")
         End If
     End Sub
     Private Sub ExitAddUnits_Click(sender As Object, e As EventArgs) Handles ExitAddUnits.Click
+        Portal.Refresh()
         Portal.Show()
         Me.Close()
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-        'If Convert.ToBoolean(DataGridView1.Rows(e.RowIndex).Cells(0).Value) Then
-        If maxCredits > Integer.Parse(Me.Tag.ToString().Substring(8)) Or maxCredits + Integer.Parse(DataGridView1.Rows(e.RowIndex).Cells(5).Value) > Integer.Parse(Me.Tag.ToString().Substring(8)) Then
+        If maxCredits > Integer.Parse(Me.Tag.ToString().Substring(8)) Or maxCredits + Integer.Parse(DataGridView1.Rows(e.RowIndex).Cells(4).Value) > Integer.Parse(Me.Tag.ToString().Substring(8)) Then
             MessageBox.Show("You've exceeded you maximum creadit hours  ")
         Else
-            maxCredits = maxCredits + Integer.Parse(DataGridView1.Rows(e.RowIndex).Cells(5).Value)
+            maxCredits = maxCredits + Integer.Parse(DataGridView1.Rows(e.RowIndex).Cells(4).Value)
             MaxCreditsText.Text = maxCredits.ToString() + "/" + Me.Tag.ToString().Substring(8) + " Hours"
         End If
     End Sub
@@ -100,12 +99,12 @@ Public Class Units
                 cmd.Parameters.AddWithValue("@id", row.Cells("ID").Value)
                 cmd.ExecuteNonQuery()
                 conn.Close()
-
             End If
         Next
         DataGridView2.Columns.RemoveAt(0)
         maxCredits = 0
         PLoad_data()
+        Me.Refresh()
         MessageBox.Show("You've dropped the units")
 
     End Sub
