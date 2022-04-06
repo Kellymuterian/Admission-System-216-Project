@@ -20,7 +20,13 @@ Public Class Form2
         Me.Hide()
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+    Private Sub AddLec_Click(sender As Object, e As EventArgs) Handles AddLec.Click
+        AddLecturer.Show()
+        Me.Hide()
+    End Sub
 
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        ClassList.Show()
+        Me.Hide()
     End Sub
 End Class

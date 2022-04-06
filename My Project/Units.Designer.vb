@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Units
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,16 +20,16 @@ Partial Class Units
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Units))
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.CheckBoxCol = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.ExitAddUnits = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MaxCreditsText = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -41,55 +41,50 @@ Partial Class Units
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CheckBoxCol})
         Me.DataGridView1.GridColor = System.Drawing.Color.Black
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 12)
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 12)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(587, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(576, 150)
         Me.DataGridView1.TabIndex = 0
-        '
-        'CheckBoxCol
-        '
-        Me.CheckBoxCol.HeaderText = "Selected"
-        Me.CheckBoxCol.Name = "CheckBoxCol"
-        Me.CheckBoxCol.Width = 55
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Button1.Location = New System.Drawing.Point(49, 522)
+        Me.Button1.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(12, 224)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(149, 54)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "SUBMIT"
+        Me.Button1.Text = "Add Units"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'DataGridView2
         '
-        Me.DataGridView2.BackgroundColor = System.Drawing.SystemColors.HighlightText
+        Me.DataGridView2.AllowUserToAddRows = False
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(16, 188)
+        Me.DataGridView2.Location = New System.Drawing.Point(16, 303)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(587, 150)
+        Me.DataGridView2.Size = New System.Drawing.Size(576, 201)
         Me.DataGridView2.TabIndex = 2
         '
         'ExitAddUnits
         '
-        Me.ExitAddUnits.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ExitAddUnits.BackColor = System.Drawing.Color.Salmon
+        Me.ExitAddUnits.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ExitAddUnits.ForeColor = System.Drawing.Color.Black
-        Me.ExitAddUnits.Location = New System.Drawing.Point(257, 522)
+        Me.ExitAddUnits.Location = New System.Drawing.Point(16, 628)
         Me.ExitAddUnits.Name = "ExitAddUnits"
-        Me.ExitAddUnits.Size = New System.Drawing.Size(153, 54)
+        Me.ExitAddUnits.Size = New System.Drawing.Size(149, 54)
         Me.ExitAddUnits.TabIndex = 36
-        Me.ExitAddUnits.Text = "EXIT"
+        Me.ExitAddUnits.Text = "Exit"
         Me.ExitAddUnits.UseVisualStyleBackColor = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(12, 374)
+        Me.Label1.Location = New System.Drawing.Point(12, 177)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(158, 21)
         Me.Label1.TabIndex = 37
@@ -99,18 +94,42 @@ Partial Class Units
         '
         Me.MaxCreditsText.AutoSize = True
         Me.MaxCreditsText.Font = New System.Drawing.Font("Berlin Sans FB", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaxCreditsText.Location = New System.Drawing.Point(176, 374)
+        Me.MaxCreditsText.Location = New System.Drawing.Point(176, 177)
         Me.MaxCreditsText.Name = "MaxCreditsText"
         Me.MaxCreditsText.Size = New System.Drawing.Size(49, 21)
         Me.MaxCreditsText.TabIndex = 38
         Me.MaxCreditsText.Text = "NaN"
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.SeaGreen
+        Me.Button2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.Cornsilk
+        Me.Button2.Location = New System.Drawing.Point(12, 521)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(149, 54)
+        Me.Button2.TabIndex = 39
+        Me.Button2.Text = "Drop Units"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.RoyalBlue
+        Me.Button3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(16, 546)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(149, 54)
+        Me.Button3.TabIndex = 39
+        Me.Button3.Text = "Drop Units"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'Units
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1111, 644)
+        Me.ClientSize = New System.Drawing.Size(1255, 754)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.MaxCreditsText)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView2)
@@ -132,5 +151,6 @@ Partial Class Units
     Friend WithEvents ExitAddUnits As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents MaxCreditsText As Label
-    Friend WithEvents CheckBoxCol As DataGridViewCheckBoxColumn
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class
