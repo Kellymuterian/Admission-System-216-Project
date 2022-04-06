@@ -23,29 +23,29 @@ Partial Class ClassList
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Lectureres = New System.Windows.Forms.ComboBox()
         Me.ExitAddUnits = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.Generate = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Lectureres = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.GroupBox1.Controls.Add(Me.Lectureres)
         Me.GroupBox1.Controls.Add(Me.ExitAddUnits)
-        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.DataGridView2)
         Me.GroupBox1.Controls.Add(Me.Generate)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.GroupBox1.Location = New System.Drawing.Point(13, 13)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(1211, 848)
@@ -53,29 +53,25 @@ Partial Class ClassList
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Class List"
         '
+        'Lectureres
+        '
+        Me.Lectureres.FormattingEnabled = True
+        Me.Lectureres.Location = New System.Drawing.Point(80, 114)
+        Me.Lectureres.Name = "Lectureres"
+        Me.Lectureres.Size = New System.Drawing.Size(416, 28)
+        Me.Lectureres.TabIndex = 38
+        '
         'ExitAddUnits
         '
         Me.ExitAddUnits.BackColor = System.Drawing.Color.Salmon
         Me.ExitAddUnits.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ExitAddUnits.ForeColor = System.Drawing.Color.Black
-        Me.ExitAddUnits.Location = New System.Drawing.Point(884, 513)
+        Me.ExitAddUnits.Location = New System.Drawing.Point(924, 669)
         Me.ExitAddUnits.Name = "ExitAddUnits"
         Me.ExitAddUnits.Size = New System.Drawing.Size(149, 54)
         Me.ExitAddUnits.TabIndex = 37
         Me.ExitAddUnits.Text = "Exit"
         Me.ExitAddUnits.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.DarkGreen
-        Me.Button1.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(693, 513)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(149, 54)
-        Me.Button1.TabIndex = 25
-        Me.Button1.Text = "Download (pdf)"
-        Me.Button1.UseVisualStyleBackColor = False
         '
         'DataGridView2
         '
@@ -131,14 +127,6 @@ Partial Class ClassList
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Generate a classlist for the lecturers"
         '
-        'Lectureres
-        '
-        Me.Lectureres.FormattingEnabled = True
-        Me.Lectureres.Location = New System.Drawing.Point(80, 114)
-        Me.Lectureres.Name = "Lectureres"
-        Me.Lectureres.Size = New System.Drawing.Size(416, 28)
-        Me.Lectureres.TabIndex = 38
-        '
         'ClassList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -159,7 +147,6 @@ Partial Class ClassList
     Friend WithEvents Label2 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Generate As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents ExitAddUnits As Button
     Friend WithEvents Lectureres As ComboBox

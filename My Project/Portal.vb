@@ -42,11 +42,13 @@ Public Class Portal
             GradDate.Text = student(7)
         End If
     End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Units.Tag = admissionNumber + " " + maxCDr.ToString()
         Units.Show()
-        Me.Hide()
+        Me.Close()
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
     End Sub
 
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
