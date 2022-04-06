@@ -2,7 +2,8 @@
 Public Class AddCourses
     Dim db As OleDbConnection = New OleDbConnection()
     Private Sub AddCourse_Click(sender As Object, e As EventArgs) Handles AddCourse.Click
-        db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb"
+        ' db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb"
+        db.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\source\repos\Admission\MainDb.mdb"
         db.Open()
         Dim insertCommand As String = "INSERT into Courses([Name],[Desc],[MaxCredits],[Level],[School],[Department],[Duration]) VALUES('" & CourseName.Text & "','" & CourseDesc.Text & "','" & MaxCredits.Text & "','" & Level.Text & "','" & Schl.Text & "','" & Dptment.Text & "','" & Duration.Text & "')"
         Dim cmd As OleDbCommand = New OleDbCommand(insertCommand, db)
@@ -36,6 +37,10 @@ Public Class AddCourses
     End Sub
 
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    Private Sub CourseName_TextChanged(sender As Object, e As EventArgs) Handles CourseName.TextChanged
 
     End Sub
 End Class

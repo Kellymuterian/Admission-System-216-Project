@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 Public Class AddLecturer
+    Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\source\repos\Admission\MainDb.mdb")
     'Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb")
-    Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb")
     Private Sub ExitAdmitStudents_Click(sender As Object, e As EventArgs) Handles ExitAdmitStudents.Click
         Form2.Show()
         Me.Close()
@@ -23,5 +23,13 @@ Public Class AddLecturer
         LecEmail.Clear()
         LecNames.Clear()
         LecPhone.Clear()
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    Private Sub LecNames_TextChanged(sender As Object, e As EventArgs) Handles LecNames.TextChanged
+
     End Sub
 End Class

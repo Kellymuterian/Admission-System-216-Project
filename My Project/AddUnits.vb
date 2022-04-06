@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 Public Class AddUnits
-    'Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\source\repos\VB Database\MainDb.mdb")
-    Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb")
+    Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\source\repos\Admission\MainDb.mdb")
+    ' Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb")
     Private Sub AddUnit_Click(sender As Object, e As EventArgs) Handles AddUnit.Click
         conn.Open()
         Dim insertCommand As String = "INSERT into Units([Name],[Description],[Lecturer],[CreditHours]) VALUES('" & UnitName.Text & "','" & Description.Text & "','" & Lectureres.SelectedItem.ToString() & "','" & Credits.Text & "')"
@@ -38,5 +38,9 @@ Public Class AddUnits
     End Sub
     Private Sub AddUnits_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PLoad_data()
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
     End Sub
 End Class

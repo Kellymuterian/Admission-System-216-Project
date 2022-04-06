@@ -1,8 +1,8 @@
 ﻿Imports System.Data.OleDb
 
 Public Class Units
-    'Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\source\repos\VB Database\MainDb.mdb")
-    Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb")
+    Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\source\repos\Admission\MainDb.mdb")
+    'Dim conn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb")
     Dim maxCredits As Integer = 0
     Private Sub Load_data()
         conn.Open()
@@ -24,7 +24,7 @@ Public Class Units
 
     Private Sub PLoad_data()
         conn.Open()
-        Dim cmd As New OleDbCommand("select ID,Name, Description, Lecturer, CreditHours from Selected WHERE AdmNo = @admissionNumber", conn)
+        Dim cmd As New OleDbCommand("select Name, Description, Lecturer, CreditHours from Selected WHERE AdmNo = @admissionNumber", conn)
         cmd.Parameters.AddWithValue("@admissionNumber", Me.Tag.ToString().Substring(0, 7))
         Dim dtb As New OleDbDataAdapter
         dtb.SelectCommand = cmd

@@ -23,6 +23,7 @@ Partial Class AddUnits
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Lectureres = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ExitAddUnits = New System.Windows.Forms.Button()
         Me.AddUnit = New System.Windows.Forms.Button()
@@ -33,7 +34,6 @@ Partial Class AddUnits
         Me.Label3 = New System.Windows.Forms.Label()
         Me.UnitName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Lectureres = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -59,6 +59,14 @@ Partial Class AddUnits
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "ADD UNITS"
+        '
+        'Lectureres
+        '
+        Me.Lectureres.FormattingEnabled = True
+        Me.Lectureres.Location = New System.Drawing.Point(125, 189)
+        Me.Lectureres.Name = "Lectureres"
+        Me.Lectureres.Size = New System.Drawing.Size(416, 30)
+        Me.Lectureres.TabIndex = 30
         '
         'Label5
         '
@@ -150,14 +158,6 @@ Partial Class AddUnits
         Me.Label2.Size = New System.Drawing.Size(60, 21)
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "Name"
-        '
-        'Lectureres
-        '
-        Me.Lectureres.FormattingEnabled = True
-        Me.Lectureres.Location = New System.Drawing.Point(125, 189)
-        Me.Lectureres.Name = "Lectureres"
-        Me.Lectureres.Size = New System.Drawing.Size(416, 30)
-        Me.Lectureres.TabIndex = 30
         '
         'AddUnits
         '
