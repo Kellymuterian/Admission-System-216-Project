@@ -7,7 +7,7 @@ Public Class Form1
             Me.Hide()
             UserName.Clear()
             Password.Clear()
-        ElseIf (Password.Text = "st") Then
+        ElseIf (Password.Text = "123456") Then
             'db.ConnectionString = String.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\Adm\source\repos\VB Database\MainDb.mdb")
             db.ConnectionString = String.Format("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\hp\source\repos\DB\MainDb.mdb")
             db.Open()

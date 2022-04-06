@@ -75,11 +75,10 @@ Public Class Units
         End If
     End Sub
     Private Sub ExitAddUnits_Click(sender As Object, e As EventArgs) Handles ExitAddUnits.Click
-        Portal.Refresh()
+        Portal.Tag = Me.Tag.ToString().Substring(0, 7)
         Portal.Show()
         Me.Close()
     End Sub
-
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         If maxCredits > Integer.Parse(Me.Tag.ToString().Substring(8)) Or maxCredits + Integer.Parse(DataGridView1.Rows(e.RowIndex).Cells(4).Value) > Integer.Parse(Me.Tag.ToString().Substring(8)) Then
             MessageBox.Show("You've exceeded you maximum creadit hours  ")

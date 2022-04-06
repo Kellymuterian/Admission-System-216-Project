@@ -24,7 +24,7 @@ Public Class AddUnits
 
     Private Sub ExitAddUnits_Click(sender As Object, e As EventArgs) Handles ExitAddUnits.Click
         Form2.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
     Private Sub PLoad_data()
         conn.Open()
